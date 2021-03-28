@@ -25,30 +25,4 @@ export const MENU_ITEMS: NbMenuItem[] = [
             },
         ],
     },
-    {
-        title: 'Modal & Overlays',
-        icon: 'browser-outline',
-        children: [
-            {
-                title: 'Dialog',
-                link: '/pages/modal-overlays/dialog',
-            },
-            {
-                title: 'Window',
-                link: '/pages/modal-overlays/window',
-            },
-            {
-                title: 'Popover',
-                link: '/pages/modal-overlays/popover',
-            },
-            {
-                title: 'Toastr',
-                link: '/pages/modal-overlays/toastr',
-            },
-            {
-                title: 'Tooltip',
-                link: '/pages/modal-overlays/tooltip',
-            },
-        ],
-    },
 ];
