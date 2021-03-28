@@ -25,4 +25,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
             },
         ],
     },
+    {
+        title: 'Profile',
+        icon: 'layout-outline',
+        link: '/pages/profile',
+    },
 ];
