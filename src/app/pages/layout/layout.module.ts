@@ -7,7 +7,7 @@ import {
     NbListModule,
     NbRouteTabsetModule,
     NbStepperModule,
-    NbTabsetModule, NbUserModule,
+    NbTabsetModule, NbTagModule, NbUserModule,
 } from '@nebular/theme';
 
 import {ThemeModule} from '../../@theme/theme.module';
@@ -32,6 +32,7 @@ import {RecommendCompaniesComponent} from './recommend-companies/recommend-compa
         NbAccordionModule,
         NbUserModule,
         LayoutRoutingModule,
+        NbTagModule,
     ],
     declarations: [
         LayoutComponent,

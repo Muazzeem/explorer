@@ -21,7 +21,7 @@ export class NewsService {
     const startIndex = ((page - 1) % TOTAL_PAGES) * pageSize;
 
     return this.http
-      .get<NewsPost[]>('assets/data/news.json')
+      .get<NewsPost[]>('https://it-jobs.fractalslab.com/api/companies?_start=1&_limit=5000')
       .pipe(
         map(news => news.splice(startIndex, pageSize)),
         delay(1500),

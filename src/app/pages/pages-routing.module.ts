@@ -5,6 +5,7 @@ import {PagesComponent} from './pages.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {NotFoundComponent} from './miscellaneous/not-found/not-found.component';
 import {ProfileComponent} from './profile/profile.component';
+import {SignUpComponent} from './sign-up/sign-up.component';
 
 const routes: Routes = [{
     path: '',
@@ -17,6 +18,10 @@ const routes: Routes = [{
         {
             path: 'profile',
             component: ProfileComponent,
+        },
+        {
+            path: 'login',
+            component: SignUpComponent,
         },
         {
             path: 'layout',

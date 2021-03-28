@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {UserService} from '../../@core/mock/users.service';
 
 @Component({
     selector: 'ngx-profile',
@@ -12,11 +13,13 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
     `],
 })
 export class ProfileComponent implements OnInit {
+    userProfile: any;
 
-    constructor() {
+    constructor(private userService: UserService) {
     }
 
     ngOnInit(): void {
+        this.userService.getProfile();
     }
 
 }

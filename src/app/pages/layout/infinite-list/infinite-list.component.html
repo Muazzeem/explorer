@@ -7,7 +7,7 @@
         [threshold]="500"
         (bottomThreshold)="loadNext(firstCard)">
         <nb-list-item *ngFor="let newsPost of firstCard.news">
-          <ngx-news-post [post]="newsPost"></ngx-news-post>
+          <ngx-news-post style="width: 100%" [post]="newsPost"></ngx-news-post>
         </nb-list-item>
       </nb-list>
     </nb-card>

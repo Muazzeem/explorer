@@ -8,6 +8,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         home: true,
     },
     {
+        title: 'Login',
+        icon: 'shopping-cart-outline',
+        link: '/pages/login',
+    },
+    {
         title: 'FEATURES',
         group: true,
     },
