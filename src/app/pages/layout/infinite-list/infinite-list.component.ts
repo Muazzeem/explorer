@@ -7,15 +7,7 @@ import { NewsService } from '../news.service';
   styleUrls: ['infinite-list.component.scss'],
 })
 export class InfiniteListComponent {
-
-
   firstCard = {
-    news: [],
-    placeholders: [],
-    loading: false,
-    pageToLoadNext: 1,
-  };
-  secondCard = {
     news: [],
     placeholders: [],
     loading: false,

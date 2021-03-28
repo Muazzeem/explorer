@@ -15,7 +15,6 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { InfiniteListComponent } from './infinite-list/infinite-list.component';
 import { NewsPostComponent } from './infinite-list/news-post/news-post.component';
-import { NewsPostPlaceholderComponent } from './infinite-list/news-post-placeholder/news-post-placeholder.component';
 import { NewsService } from './news.service';
 
 @NgModule({
@@ -35,7 +34,6 @@ import { NewsService } from './news.service';
   ],
   declarations: [
     LayoutComponent,
-    NewsPostPlaceholderComponent,
     InfiniteListComponent,
     NewsPostComponent,
   ],
