@@ -1,5 +1,13 @@
 <nb-card>
-    <nb-card-header><b><img src="https://img.icons8.com/fluent/30/000000/test-account.png"/>Personal Information: </b>
+    <nb-card-header>
+        <div class="row">
+            <div class="col">
+                <b><img src="https://img.icons8.com/fluent/30/000000/test-account.png"/>Personal Information: </b>
+            </div>
+            <div class="col">
+                <img class="float-right" src="https://img.icons8.com/fluent/30/000000/ball-point-pen.png"/>
+            </div>
+        </div>
     </nb-card-header>
     <nb-card-body>
         <p>Please introduce yourself to us. Based on your information we can deliver more interactive insight to
@@ -12,7 +20,16 @@
             <div class="col-sm-8">
                 <nb-list>
                     <nb-list-item>
-
+                        <p><img src="https://img.icons8.com/fluent/30/000000/username.png"/> Muazzem Hossain Mamun</p>
+                    </nb-list-item>
+                    <nb-list-item>
+                        <p><img src="https://img.icons8.com/fluent/30/000000/email.png"/> mamun@gmail.com</p>
+                    </nb-list-item>
+                    <nb-list-item>
+                        <p><img src="https://img.icons8.com/fluent/30/000000/address.png"/> Haluaghat, Mymensingh</p>
+                    </nb-list-item>
+                    <nb-list-item>
+                        <p><img src="https://img.icons8.com/fluent/30/000000/phone.png"/> 01766016431</p>
                     </nb-list-item>
                 </nb-list>
             </div>
@@ -23,13 +40,34 @@
     <nb-card-body>
 
         <nb-tabset fullWidth>
-            <nb-tab tabTitle="Users">
-                <p>List of <strong>users</strong>.</p>
+            <nb-tab tabTitle="Your Stacks">
+                <nb-tag-list>
+                    <nb-tag status="primary" appearance="filled" text="Python"></nb-tag>
+                    <nb-tag status="primary" appearance="filled" text="Django"></nb-tag>
+                </nb-tag-list>
             </nb-tab>
-            <nb-tab tabTitle="Orders">
+            <nb-tab tabTitle="Update Stacks">
                 <p>List of <strong>orders</strong>.</p>
             </nb-tab>
         </nb-tabset>
 
     </nb-card-body>
 </nb-card>
+<div class="row">
+    <div class="col-sm-6">
+        <nb-card size="tiny">
+            <nb-badge text="New Feature" status="success" position="top right"></nb-badge>
+            <nb-card-header>Upload Your Resume</nb-card-header>
+        </nb-card>
+    </div>
+    <div class="col-sm-6">
+        <nb-card size="tiny" status="warning">
+            <nb-card-header>Information About Resume Upload</nb-card-header>
+            <nb-card-body>
+                <p>You can also upload your CV. The system will collect stacks from your CV and recommend the most
+                    relevant companies for you. Please be patient. It will take 5-6 minutes to review your CV and update
+                    stacks accordingly.</p>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>

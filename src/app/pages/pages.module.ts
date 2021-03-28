@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {NbCardModule, NbListModule, NbMenuModule, NbTabsetModule} from '@nebular/theme';
+import {NbBadgeModule, NbCardModule, NbListModule, NbMenuModule, NbTabsetModule, NbTagModule} from '@nebular/theme';
 
 import {ThemeModule} from '../@theme/theme.module';
 import {PagesComponent} from './pages.component';
@@ -18,6 +18,8 @@ import {ProfileComponent} from './profile/profile.component';
         NbCardModule,
         NbTabsetModule,
         NbListModule,
+        NbTagModule,
+        NbBadgeModule,
     ],
     declarations: [
         PagesComponent,
