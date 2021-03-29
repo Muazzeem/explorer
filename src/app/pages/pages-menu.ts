@@ -3,14 +3,9 @@ import {NbMenuItem} from '@nebular/theme';
 export const MENU_ITEMS: NbMenuItem[] = [
     {
         title: 'Dashboard',
-        icon: 'shopping-cart-outline',
+        icon: 'layout',
         link: '/pages/dashboard',
         home: true,
-    },
-    {
-        title: 'Login',
-        icon: 'shopping-cart-outline',
-        link: '/pages/login',
     },
     {
         title: 'FEATURES',
@@ -18,7 +13,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     },
     {
         title: 'Companies',
-        icon: 'layout-outline',
+        icon: 'grid',
         children: [
             {
                 title: 'Companies List',
@@ -29,10 +24,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
                 link: '/pages/layout/recommend',
             },
         ],
-    },
-    {
-        title: 'Profile',
-        icon: 'layout-outline',
-        link: '/pages/profile',
     },
 ];

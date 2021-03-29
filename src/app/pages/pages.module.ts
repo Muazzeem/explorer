@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core';
 import {
     NbAutocompleteModule,
-    NbBadgeModule,
+    NbBadgeModule, NbButtonModule,
     NbCardModule, NbInputModule,
     NbListModule,
-    NbMenuModule,
+    NbMenuModule, NbStepperModule,
     NbTabsetModule,
-    NbTagModule
+    NbTagModule,
 } from '@nebular/theme';
 
 import {ThemeModule} from '../@theme/theme.module';
@@ -16,7 +16,10 @@ import {PagesRoutingModule} from './pages-routing.module';
 import {MiscellaneousModule} from './miscellaneous/miscellaneous.module';
 import {ProfileComponent} from './profile/profile.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
-import { StacksUpdateComponent } from './stacks-update/stacks-update.component';
+import {StacksUpdateComponent} from './stacks-update/stacks-update.component';
+import {SettingsComponent} from './settings/settings.component';
+import {UpdateProfileComponent} from './update-profile/update-profile.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
     imports: [
@@ -32,12 +35,17 @@ import { StacksUpdateComponent } from './stacks-update/stacks-update.component';
         NbBadgeModule,
         NbAutocompleteModule,
         NbInputModule,
+        NbStepperModule,
+        ReactiveFormsModule,
+        NbButtonModule,
     ],
     declarations: [
         PagesComponent,
         ProfileComponent,
         SignUpComponent,
         StacksUpdateComponent,
+        SettingsComponent,
+        UpdateProfileComponent,
     ],
 })
 export class PagesModule {

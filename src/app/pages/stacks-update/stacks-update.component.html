@@ -1,5 +1,5 @@
 <nb-tag-list (tagRemove)="onTagRemove($event)">
-    <nb-tag *ngFor="let tree of trees" [text]="tree"
+    <nb-tag *ngFor="let stack of stacks" [text]="stack"
             appearance="filled" status="primary" removable></nb-tag>
     <input #autoInput
            (input)="onChange()" (tagAdd)="onTagAdd($event)"

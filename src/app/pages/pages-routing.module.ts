@@ -6,6 +6,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {NotFoundComponent} from './miscellaneous/not-found/not-found.component';
 import {ProfileComponent} from './profile/profile.component';
 import {SignUpComponent} from './sign-up/sign-up.component';
+import {SettingsComponent} from './settings/settings.component';
 
 const routes: Routes = [{
     path: '',
@@ -18,6 +19,10 @@ const routes: Routes = [{
         {
             path: 'profile',
             component: ProfileComponent,
+        },
+        {
+            path: 'settings',
+            component: SettingsComponent,
         },
         {
             path: 'login',

@@ -19,18 +19,18 @@ export class StacksUpdateComponent implements OnInit {
     constructor(private apiService: ApiService) {
     }
 
-    trees: Set<string> = new Set();
+    stacks: Set<string> = new Set();
 
     onTagRemove(tagToRemove: NbTagComponent): void {
-        this.trees.delete(tagToRemove.text);
+        this.stacks.delete(tagToRemove.text);
     }
 
     onTagAdd({value, input}: NbTagInputAddEvent): void {
         if (value) {
-            this.trees.add(value);
+            this.stacks.add(value);
         }
         input.nativeElement.value = '';
-        console.warn(this.trees);
+        console.warn(this.stacks);
     }
 
     ngOnInit(): void {

@@ -16,7 +16,7 @@ import {
     NbDatepickerModule,
     NbDialogModule,
     NbMenuModule,
-    NbSidebarModule,
+    NbSidebarModule, NbStepperModule,
     NbToastrModule,
     NbWindowModule,
 } from '@nebular/theme';
@@ -43,6 +43,7 @@ import {UserService} from './@core/mock/users.service';
         }),
         CoreModule.forRoot(),
         ThemeModule.forRoot(),
+        NbStepperModule,
     ],
     bootstrap: [AppComponent],
     providers: [
