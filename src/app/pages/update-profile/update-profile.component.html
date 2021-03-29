@@ -1,0 +1,19 @@
+<div class="container">
+    <nb-card>
+        <nb-card-header><b>Your Settings</b></nb-card-header>
+        <nb-card-body>
+            <form [formGroup]="settingsForm" (ngSubmit)="submitForm()">
+                <input type="url" nbInput fullWidth placeholder="URL of profile picture" formControlName="image">
+                <input type="text" nbInput fullWidth placeholder="Name" formControlName="name">
+                <div class="full-name-inputs">
+                    <input type="email" nbInput fullWidth placeholder="Email" formControlName="email">
+                    <input type="text" nbInput fullWidth placeholder="Phone" formControlName="phone">
+                </div>
+                <input type="url" nbInput fullWidth placeholder="GitHub" formControlName="github">
+                <input type="url" nbInput fullWidth placeholder="Linkedin" formControlName="linkedin">
+                <textarea rows="4" nbInput fullWidth placeholder="Text Area" formControlName="address"></textarea>
+                <button nbButton status="success">Success</button>
+            </form>
+        </nb-card-body>
+    </nb-card>
+</div>
