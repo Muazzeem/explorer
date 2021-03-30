@@ -20,6 +20,7 @@ import {StacksUpdateComponent} from './stacks-update/stacks-update.component';
 import {SettingsComponent} from './settings/settings.component';
 import {UpdateProfileComponent} from './update-profile/update-profile.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {ChartsModule} from 'ng2-charts';
 
 @NgModule({
     imports: [
@@ -38,6 +39,7 @@ import {ReactiveFormsModule} from '@angular/forms';
         NbStepperModule,
         ReactiveFormsModule,
         NbButtonModule,
+        ChartsModule,
     ],
     declarations: [
         PagesComponent,
@@ -46,6 +48,8 @@ import {ReactiveFormsModule} from '@angular/forms';
         StacksUpdateComponent,
         SettingsComponent,
         UpdateProfileComponent,
+    ],
+    exports: [
     ],
 })
 export class PagesModule {

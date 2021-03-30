@@ -1,9 +1,45 @@
-<nb-card>
-    <nb-card-header>Nebula</nb-card-header>
-    <nb-card-body>
-        A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
-        Originally, nebula was a name for any diffuse astronomical object,
-        including galaxies beyond the Milky Way.
-    </nb-card-body>
-    <nb-card-footer>By Wikipedia</nb-card-footer>
-</nb-card>
+<div>
+    <div class="row">
+        <div class="col-sm-7">
+            <nb-card accent="info" size="medium">
+                <nb-card-header>
+                    <b>Top 10 Companies In Bangladesh</b>
+                </nb-card-header>
+                <nb-list>
+                    <nb-list-item>
+                        AAAAAA
+                    </nb-list-item>
+                </nb-list>
+            </nb-card>
+        </div>
+        <div class="col-sm-5">
+            <nb-flip-card>
+                <nb-card-front>
+                    <nb-card size="tiny" accent="info">
+                        <nb-card-header class="text-center"><b>Total Companies</b></nb-card-header>
+                        <nb-card-body class="text-center">
+                            <h1>{{total}}</h1>
+                        </nb-card-body>
+                    </nb-card>
+                </nb-card-front>
+                <nb-card-back>
+                    <nb-card size="tiny" accent="info">
+                        <nb-card-header class="text-center">Notice</nb-card-header>
+                        <nb-card-body>
+                            <p>We are update companies information after 7 days. If you want to get new information
+                                please visit our website next time.</p>
+                            <p><b>Stay with us.</b></p>
+                        </nb-card-body>
+                    </nb-card>
+                </nb-card-back>
+            </nb-flip-card>
+            <nb-card accent="info">
+                <nb-card-header class="text-center"><b>Top Technology In Bangladesh</b></nb-card-header>
+                <nb-card-body>
+                    <ngx-charts></ngx-charts>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+</div>
+

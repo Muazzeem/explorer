@@ -37,14 +37,21 @@
     </nb-card-body>
 </nb-card>
 <nb-card>
-    <nb-card-header>
-        <p><b><img class="mr-2" src="https://img.icons8.com/fluent/30/000000/laptop-coding.png"/>Your Stacks</b></p>
-    </nb-card-header>
     <nb-card-body>
-        <nb-tag-list>
-            <nb-tag status="primary" appearance="filled" text="Python"></nb-tag>
-            <nb-tag status="primary" appearance="filled" text="Django"></nb-tag>
-        </nb-tag-list>
+
+        <nb-tabset fullWidth>
+            <nb-tab tabTitle="Your Stacks">
+                <nb-tag-list>
+                    <nb-tag status="primary" appearance="filled" text="Python"></nb-tag>
+                    <nb-tag status="primary" appearance="filled" text="Django"></nb-tag>
+                </nb-tag-list>
+            </nb-tab>
+            <nb-tab tabTitle="Update Stacks">
+                <p>Please enlist your stacks which you are the strongest. Based on your stacks we will </p>
+                <p>rank the most relevant companies for you. We update the ranking every <b>1-week</b> interval.</p>
+                <ngx-stacks-update></ngx-stacks-update>
+            </nb-tab>
+        </nb-tabset>
     </nb-card-body>
 </nb-card>
 <div class="row">
