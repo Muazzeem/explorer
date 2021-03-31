@@ -17,12 +17,11 @@ import {
 import { ThemeModule } from '../../@theme/theme.module';
 
 // components
-import { DialogComponent } from './dialog/dialog.component';
 import { ShowcaseDialogComponent } from './dialog/showcase-dialog/showcase-dialog.component';
+import {PagesModule} from "../pages.module";
 
 
 const COMPONENTS = [
-  DialogComponent,
   ShowcaseDialogComponent,
 ];
 
@@ -51,6 +50,7 @@ const SERVICES = [
 @NgModule({
   imports: [
     ...MODULES,
+    PagesModule,
   ],
   declarations: [
     ...COMPONENTS,
@@ -60,6 +60,8 @@ const SERVICES = [
   ],
   entryComponents: [
     ...ENTRY_COMPONENTS,
+  ],
+  exports: [
   ],
 })
 export class ModalOverlaysModule {

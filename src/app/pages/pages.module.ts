@@ -15,19 +15,18 @@ import {DashboardModule} from './dashboard/dashboard.module';
 import {PagesRoutingModule} from './pages-routing.module';
 import {MiscellaneousModule} from './miscellaneous/miscellaneous.module';
 import {ProfileComponent} from './profile/profile.component';
-import {SignUpComponent} from './sign-up/sign-up.component';
 import {StacksUpdateComponent} from './stacks-update/stacks-update.component';
 import {SettingsComponent} from './settings/settings.component';
 import {UpdateProfileComponent} from './update-profile/update-profile.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {ChartsModule} from 'ng2-charts';
+import {SignUpComponent} from './sign-up/sign-up.component';
 
 @NgModule({
     imports: [
         PagesRoutingModule,
         ThemeModule,
         NbMenuModule,
-        DashboardModule,
         MiscellaneousModule,
         NbCardModule,
         NbTabsetModule,
@@ -44,12 +43,13 @@ import {ChartsModule} from 'ng2-charts';
     declarations: [
         PagesComponent,
         ProfileComponent,
-        SignUpComponent,
         StacksUpdateComponent,
         SettingsComponent,
         UpdateProfileComponent,
+        SignUpComponent,
     ],
     exports: [
+        SignUpComponent
     ],
 })
 export class PagesModule {
