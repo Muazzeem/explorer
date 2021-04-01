@@ -21,36 +21,34 @@ export class UpdateProfileComponent implements OnInit {
                 private router: Router,
                 private toastrService: ToastrService) {
         this.settingsForm = this.fb.group({
-            image: '',
             name: '',
             email: '',
             phone: '',
             address: '',
-            github: '',
-            linkedin: '',
         });
     }
 
     ngOnInit() {
-        // Object.assign(this.user, this.userService.getCurrentUser());
-        // this.settingsForm.patchValue(this.user);
+        Object.assign(this.user, this.userService.getCurrentUser());
+        console.warn(this.user['profile']);
+        this.settingsForm.patchValue(this.user['profile']);
     }
 
     submitForm() {
-        console.warn(this.settingsForm.value);
+        this.isSubmitting = true;
+        // update the model
+        this.updateUser(this.settingsForm.value);
+
+        this.userService
+            .update(this.user['profile'])
+            .subscribe(
+                () => this.router.navigateByUrl('pages/profile/'),
+                err => {
+                    this.errors = err;
+                    this.isSubmitting = false;
+                },
+            );
         this.toastrService.showToast('We are update your profile', '');
-        // this.isSubmitting = true;
-        // this.updateUser(this.settingsForm.value);
-        //
-        // this.userService
-        //     .update(this.user)
-        //     .subscribe(
-        //         updatedUser => this.router.navigateByUrl('/pages/profile'),
-        //         err => {
-        //             this.errors = err;
-        //             this.isSubmitting = false;
-        //         },
-        //     );
     }
 
     updateUser(values: Object) {

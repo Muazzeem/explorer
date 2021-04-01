@@ -4,14 +4,13 @@ import {
     NbBadgeModule, NbButtonModule,
     NbCardModule, NbInputModule,
     NbListModule,
-    NbMenuModule, NbStepperModule,
+    NbMenuModule, NbSpinnerModule, NbStepperModule,
     NbTabsetModule,
     NbTagModule,
 } from '@nebular/theme';
 
 import {ThemeModule} from '../@theme/theme.module';
 import {PagesComponent} from './pages.component';
-import {DashboardModule} from './dashboard/dashboard.module';
 import {PagesRoutingModule} from './pages-routing.module';
 import {MiscellaneousModule} from './miscellaneous/miscellaneous.module';
 import {ProfileComponent} from './profile/profile.component';
@@ -21,6 +20,9 @@ import {UpdateProfileComponent} from './update-profile/update-profile.component'
 import {ReactiveFormsModule} from '@angular/forms';
 import {ChartsModule} from 'ng2-charts';
 import {SignUpComponent} from './sign-up/sign-up.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {ChartsComponent} from './dashboard/charts/charts.component';
+
 
 @NgModule({
     imports: [
@@ -39,6 +41,7 @@ import {SignUpComponent} from './sign-up/sign-up.component';
         ReactiveFormsModule,
         NbButtonModule,
         ChartsModule,
+        NbSpinnerModule,
     ],
     declarations: [
         PagesComponent,
@@ -47,9 +50,13 @@ import {SignUpComponent} from './sign-up/sign-up.component';
         SettingsComponent,
         UpdateProfileComponent,
         SignUpComponent,
+        DashboardComponent,
+        ChartsComponent,
     ],
     exports: [
-        SignUpComponent
+        SignUpComponent,
+        UpdateProfileComponent,
+        ChartsComponent,
     ],
 })
 export class PagesModule {

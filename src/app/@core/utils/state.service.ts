@@ -77,16 +77,4 @@ export class StateService implements OnDestroy {
   onLayoutState(): Observable<any> {
     return this.layoutState$.asObservable();
   }
-
-  setSidebarState(state: any): any {
-    this.sidebarState$.next(state);
-  }
-
-  getSidebarStates(): Observable<any[]> {
-    return observableOf(this.sidebars);
-  }
-
-  onSidebarState(): Observable<any> {
-    return this.sidebarState$.asObservable();
-  }
 }

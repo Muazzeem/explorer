@@ -1,11 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService} from '@nebular/theme';
-
-import {UserData} from '../../../@core/data/users';
 import {LayoutService} from '../../../@core/utils';
-import {map, takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs';
 import {DialogService} from '../../../pages/service/dialog.service';
+import {UserService} from '../../../@core/mock/users.service';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'ngx-header',
@@ -40,16 +39,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
     currentTheme = 'default';
 
     userMenu = [{icon: 'person', title: 'Profile', link: '/pages/profile'},
-        {icon: 'settings', title: 'Settings', link: '/pages/settings'},
-        {icon: 'unlock', title: 'Log out'}];
+        {icon: 'settings', title: 'Settings', link: '/pages/settings'}];
 
     constructor(private sidebarService: NbSidebarService,
                 private menuService: NbMenuService,
                 private themeService: NbThemeService,
-                private userService: UserData,
                 private layoutService: LayoutService,
                 private breakpointService: NbMediaBreakpointsService,
                 private dialog: DialogService,
+                private userService: UserService,
+                private route: Router,
     ) {
     }
 
@@ -57,32 +56,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.dialog.open();
     }
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.currentTheme = this.themeService.currentTheme;
-
-        this.userService.getUsers()
-            .pipe(takeUntil(this.destroy$))
-            .subscribe((users: any) => this.user = users.nick);
-
-        const {xl} = this.breakpointService.getBreakpointsMap();
-        this.themeService.onMediaQueryChange()
-            .pipe(
-                map(([, currentBreakpoint]) => currentBreakpoint.width < xl),
-                takeUntil(this.destroy$),
-            )
-            .subscribe((isLessThanXl: boolean) => this.userPictureOnly = isLessThanXl);
-
-        this.themeService.onThemeChange()
-            .pipe(
-                map(({name}) => name),
-                takeUntil(this.destroy$),
-            )
-            .subscribe(themeName => this.currentTheme = themeName);
+        this.userService.currentUser.subscribe(user => {
+            this.user = user.profile;
+        });
     }
 
     ngOnDestroy() {
-        this.destroy$.next();
-        this.destroy$.complete();
+        this.dialog.logOut();
     }
 
     changeTheme(themeName: string) {

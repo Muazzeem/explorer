@@ -1,6 +1,6 @@
 import {of as observableOf, Observable, BehaviorSubject, ReplaySubject} from 'rxjs';
 import {Injectable} from '@angular/core';
-import {Contacts, RecentUsers, UserData} from '../data/users';
+import {Contacts, RecentUsers, User, UserData} from '../data/users';
 import {distinctUntilChanged, map} from 'rxjs/operators';
 import {ApiService} from './api.service';
 import {JwtService} from './jwt.service';
@@ -8,6 +8,9 @@ import {JwtService} from './jwt.service';
 
 @Injectable()
 export class UserService extends UserData {
+    getUsers(): Observable<User[]> {
+        throw new Error('Method not implemented.');
+    }
     stacksUrl = `/api/user/stacks`;
     userUrl = `/api/user/user-info`;
     info = [];
@@ -20,34 +23,6 @@ export class UserService extends UserData {
     constructor(private apiService: ApiService, private jwtService: JwtService) {
         super();
     }
-
-    private time: Date = new Date;
-
-    private users = {
-        nick: {name: 'Muazzem Hossain', picture: 'assets/images/nick.png'},
-    };
-    private types = {
-        mobile: 'mobile',
-    };
-    private contacts: Contacts[] = [
-        {user: this.users.nick, type: this.types.mobile},
-    ];
-    private recentUsers: RecentUsers[] = [
-        {user: this.users.nick, type: this.types.mobile, time: this.time.setHours(5, 29)},
-    ];
-
-    getUsers(): Observable<any> {
-        return observableOf(this.users);
-    }
-
-    getContacts(): Observable<Contacts[]> {
-        return observableOf(this.contacts);
-    }
-
-    getRecentUsers(): Observable<RecentUsers[]> {
-        return observableOf(this.recentUsers);
-    }
-
     getStacks(): Observable<any> {
         return this.apiService.get(this.stacksUrl);
     }
@@ -91,29 +66,27 @@ export class UserService extends UserData {
         this.isAuthenticatedSubject.next(false);
     }
 
-    attemptAuth(type, credentials): Observable<any> {
-        const route = (type === 'login') ? '/login' : '';
-        return this.apiService.post('/users' + route, {user: credentials})
-            .pipe(map(
-                data => {
-                    this.setAuth(data.user);
-                    return data;
-                },
-            ));
-    }
-
     getCurrentUser(): any {
         return this.currentUserSubject.value;
     }
 
     // Update the user on the server (email, pass, etc)
     update(user): Observable<any> {
+        console.warn('User ' + user);
         return this.apiService
-            .put('/user', {user})
+            .put('/api/user/user-info', user)
             .pipe(map(data => {
                 // Update the currentUser observable
                 this.currentUserSubject.next(data.user);
                 return data.user;
             }));
+    }
+
+    getContacts(): Observable<Contacts[]> {
+        return undefined;
+    }
+
+    getRecentUsers(): Observable<RecentUsers[]> {
+        return undefined;
     }
 }

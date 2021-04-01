@@ -1,8 +1,13 @@
 import {Component, OnInit} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {distinctUntilChanged} from 'rxjs/operators';
+import {SocialAuthService} from 'angularx-social-login';
+import {FacebookLoginProvider, GoogleLoginProvider} from 'angularx-social-login';
 import {UserService} from '../../@core/mock/users.service';
 import {ApiService} from '../../@core/mock/api.service';
+import {ToastrService} from '../service/toastr.service';
+import {NbDialogRef} from '@nebular/theme';
+import {LogoutdialogDialogComponent} from '../modal-overlays/dialog/log-out-dialog/log-out-dialog.component';
 
 
 @Component({
@@ -12,28 +17,47 @@ import {ApiService} from '../../@core/mock/api.service';
 })
 export class SignUpComponent implements OnInit {
     loginURL = `/api/user/get-token`;
-    token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6IjEwNjAyNjQ5MzY2MTQxODgwMjg3MyIsImV4cCI6MTcwMzMxMzc5NH0.t5-wkFuT4-LTru4sUozWuKKslppGZ8xLOY7DuRyifVI';
     private currentSocialUserSubject = new BehaviorSubject<any>({} as any);
     public currentSocialUser = this.currentSocialUserSubject.asObservable().pipe(distinctUntilChanged());
 
     constructor(private userService: UserService,
-                private apiService: ApiService) {
+                private apiService: ApiService,
+                private authService: SocialAuthService,
+                private toastrService: ToastrService,
+                protected ref: NbDialogRef<LogoutdialogDialogComponent>,
+    ) {
     }
 
     ngOnInit(): void {
-        console.warn('aaa');
         this.currentSocialUser.subscribe(data => {
             this.apiService.post(this.loginURL, data).subscribe(
                 // tslint:disable-next-line:no-shadowed-variable
                 data => {
                     localStorage.clear();
-                    localStorage.setItem('token', this.token);
+                    localStorage.setItem('token', data.token);
                     this.userService.populate();
                 },
             );
         });
-
-
     }
+
+    // tslint:disable-next-line:typedef
+    signInWithFB() {
+        this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(async user => {
+            await this.currentSocialUserSubject.next({provider: user.provider, token: user.authToken});
+            this.toastrService.showToast('Welcome ' + user.name, '');
+            this.ref.close();
+        });
+    }
+
+    // tslint:disable-next-line:typedef
+    signInWithGoogle() {
+        this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(async user => {
+            await this.currentSocialUserSubject.next({provider: user.provider, token: user.idToken});
+            this.toastrService.showToast('Welcome ' + user.name, '');
+            this.ref.close();
+        });
+    }
+
 
 }

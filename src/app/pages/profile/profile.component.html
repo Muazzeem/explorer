@@ -2,10 +2,13 @@
     <nb-card-header>
         <div class="row">
             <div class="col">
-                <b><img class="mr-2" src="https://img.icons8.com/fluent/30/000000/test-account.png"/>Personal Information: </b>
+                <b><img class="mr-2" src="https://img.icons8.com/fluent/30/000000/test-account.png"/>Personal
+                    Information: </b>
             </div>
             <div class="col">
-                <button class="float-right" size="small" status="primary" routerLink="/pages/settings" nbButton>Edit Profile Settings</button>
+                <button class="float-right" size="small" status="primary" routerLink="/pages/settings" nbButton>Edit
+                    Profile Settings
+                </button>
             </div>
         </div>
     </nb-card-header>
@@ -20,16 +23,22 @@
             <div class="col-sm-8">
                 <nb-list>
                     <nb-list-item>
-                        <p><img src="https://img.icons8.com/fluent/30/000000/username.png"/> Muazzem Hossain Mamun</p>
+                        <p>
+                            <img src="https://img.icons8.com/fluent/30/000000/username.png"/> {{currentUser.profile?.name}}
+                        </p>
                     </nb-list-item>
                     <nb-list-item>
-                        <p><img src="https://img.icons8.com/fluent/30/000000/email.png"/> mamun@gmail.com</p>
+                        <p><img src="https://img.icons8.com/fluent/30/000000/email.png"/> {{currentUser.profile?.email}}
+                        </p>
                     </nb-list-item>
                     <nb-list-item>
-                        <p><img src="https://img.icons8.com/fluent/30/000000/address.png"/> Haluaghat, Mymensingh</p>
+                        <p>
+                            <img src="https://img.icons8.com/fluent/30/000000/address.png"/> {{currentUser.profile?.address}}
+                        </p>
                     </nb-list-item>
                     <nb-list-item>
-                        <p><img src="https://img.icons8.com/fluent/30/000000/phone.png"/> 01766016431</p>
+                        <p><img src="https://img.icons8.com/fluent/30/000000/phone.png"/> {{currentUser.profile?.phone}}
+                        </p>
                     </nb-list-item>
                 </nb-list>
             </div>
@@ -42,8 +51,8 @@
         <nb-tabset fullWidth>
             <nb-tab tabTitle="Your Stacks">
                 <nb-tag-list>
-                    <nb-tag status="primary" appearance="filled" text="Python"></nb-tag>
-                    <nb-tag status="primary" appearance="filled" text="Django"></nb-tag>
+                    <nb-tag status="primary" appearance="filled" *ngFor="let stack of currentStacks"
+                            text="{{stack}}"></nb-tag>
                 </nb-tag-list>
             </nb-tab>
             <nb-tab tabTitle="Update Stacks">
@@ -60,7 +69,7 @@
             <nb-badge text="New Feature" status="success" position="top right"></nb-badge>
             <nb-card-header>
                 <p><b><img class="mr-2" src="https://img.icons8.com/fluent/30/000000/submit-resume.png"/>Upload
-                Your Resume</b></p>
+                    Your Resume</b></p>
             </nb-card-header>
         </nb-card>
     </div>

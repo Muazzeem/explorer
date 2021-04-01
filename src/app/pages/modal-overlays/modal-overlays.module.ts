@@ -1,68 +1,68 @@
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 import {
-  NbButtonModule,
-  NbCardModule,
-  NbCheckboxModule,
-  NbDialogModule,
-  NbInputModule,
-  NbPopoverModule,
-  NbSelectModule,
-  NbTabsetModule,
-  NbTooltipModule,
-  NbWindowModule,
+    NbButtonModule,
+    NbCardModule,
+    NbCheckboxModule,
+    NbDialogModule,
+    NbInputModule,
+    NbPopoverModule,
+    NbSelectModule,
+    NbTabsetModule,
+    NbTooltipModule,
+    NbWindowModule,
 } from '@nebular/theme';
 
 // modules
-import { ThemeModule } from '../../@theme/theme.module';
+import {ThemeModule} from '../../@theme/theme.module';
 
 // components
-import { ShowcaseDialogComponent } from './dialog/showcase-dialog/showcase-dialog.component';
-import {PagesModule} from "../pages.module";
+import {ShowcaseDialogComponent} from './dialog/showcase-dialog/showcase-dialog.component';
+import {LogoutdialogDialogComponent} from './dialog/log-out-dialog/log-out-dialog.component';
+import {PagesModule} from '../pages.module';
 
 
 const COMPONENTS = [
-  ShowcaseDialogComponent,
+    ShowcaseDialogComponent,
+    LogoutdialogDialogComponent,
 ];
 
 const ENTRY_COMPONENTS = [
-  ShowcaseDialogComponent,
+    ShowcaseDialogComponent,
 ];
 
 const MODULES = [
-  FormsModule,
-  ThemeModule,
-  NbDialogModule.forChild(),
-  NbWindowModule.forChild(),
-  NbCardModule,
-  NbCheckboxModule,
-  NbTabsetModule,
-  NbPopoverModule,
-  NbButtonModule,
-  NbInputModule,
-  NbSelectModule,
-  NbTooltipModule,
+    FormsModule,
+    ThemeModule,
+    NbDialogModule.forChild(),
+    NbWindowModule.forChild(),
+    NbCardModule,
+    NbCheckboxModule,
+    NbTabsetModule,
+    NbPopoverModule,
+    NbButtonModule,
+    NbInputModule,
+    NbSelectModule,
+    NbTooltipModule,
 ];
 
-const SERVICES = [
-];
+const SERVICES = [];
 
 @NgModule({
-  imports: [
-    ...MODULES,
-    PagesModule,
-  ],
-  declarations: [
-    ...COMPONENTS,
-  ],
-  providers: [
-    ...SERVICES,
-  ],
-  entryComponents: [
-    ...ENTRY_COMPONENTS,
-  ],
-  exports: [
-  ],
+    imports: [
+        ...MODULES,
+        PagesModule,
+    ],
+    declarations: [
+        ...COMPONENTS,
+    ],
+    providers: [
+        ...SERVICES,
+    ],
+    entryComponents: [
+        ...ENTRY_COMPONENTS,
+    ],
+    exports: [],
 })
 export class ModalOverlaysModule {
 }

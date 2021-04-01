@@ -1,5 +1,8 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {UserService} from '../../@core/mock/users.service';
+import {concatMap, tap} from 'rxjs/operators';
+import {ActivatedRoute} from '@angular/router';
+import {Profile, User} from '../../@core/models';
 
 @Component({
     selector: 'ngx-profile',
@@ -13,13 +16,35 @@ import {UserService} from '../../@core/mock/users.service';
     `],
 })
 export class ProfileComponent implements OnInit {
-    userProfile: any;
-
-    constructor(private userService: UserService) {
+    constructor(private userService: UserService,
+                private route: ActivatedRoute,
+    ) {
     }
 
-    ngOnInit(): void {
-        this.userService.getProfile();
+    currentUser: any;
+    currentStacks: any[];
+
+    userStacksLists() {
+        this.userService.getStacks().subscribe(
+            data => {
+                this.currentStacks = data;
+                const sorted = this.currentStacks.sort();
+            },
+        );
+
+    }
+    ngOnInit() {
+        this.route.data.pipe(
+            concatMap((data: { profile: Profile }) => {
+                // Load the current user's data.
+                return this.userService.currentUser.pipe(tap(
+                    (userData: User) => {
+                        this.currentUser = userData;
+                    },
+                ));
+            }),
+        ).subscribe();
+        this.userStacksLists();
     }
 
 }
