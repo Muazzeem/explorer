@@ -6,37 +6,38 @@
                     <b>Top 10 Companies In Bangladesh</b>
                 </nb-card-header>
                 <nb-list>
-                    <nb-list-item>
-                        AAAAAA
+                    <nb-list-item *ngFor="let company of data">
+                        <a style="text-decoration: none" target="_blank" href="{{company.web}}">{{company.name}}</a>
                     </nb-list-item>
                 </nb-list>
             </nb-card>
+            <nb-card accent="info" size="tiny">
+                <nb-card-header><b>Popular Stacks</b></nb-card-header>
+                <nb-card-body>
+                    <nb-tag-list>
+                        <nb-tag *ngFor="let stack of stacks" status="info" appearance="outline"
+                                text="{{stack.name}}"></nb-tag>
+                    </nb-tag-list>
+                </nb-card-body>
+            </nb-card>
         </div>
         <div class="col-sm-5">
-            <nb-flip-card>
-                <nb-card-front>
-                    <nb-card size="tiny" accent="info">
-                        <nb-card-header class="text-center"><b>Total Companies</b></nb-card-header>
-                        <nb-card-body class="text-center">
-                            <h1>{{total}}</h1>
-                        </nb-card-body>
-                    </nb-card>
-                </nb-card-front>
-                <nb-card-back>
-                    <nb-card size="tiny" accent="info">
-                        <nb-card-header class="text-center">Notice</nb-card-header>
-                        <nb-card-body>
-                            <p>We are update companies information after 7 days. If you want to get new information
-                                please visit our website next time.</p>
-                            <p><b>Stay with us.</b></p>
-                        </nb-card-body>
-                    </nb-card>
-                </nb-card-back>
-            </nb-flip-card>
+            <nb-card accent="info">
+                <nb-card-header class="text-center"><b>Total Companies</b></nb-card-header>
+                <nb-card-body class="text-center">
+                    <h1>{{total}}</h1>
+                </nb-card-body>
+            </nb-card>
             <nb-card accent="info">
                 <nb-card-header class="text-center"><b>Top Technology In Bangladesh</b></nb-card-header>
                 <nb-card-body>
-
+                    <div class="chart-wrapper">
+                        <canvas baseChart
+                                [data]="doughnutChartData"
+                                [labels]="doughnutChartLabels"
+                                [chartType]="doughnutChartType">
+                        </canvas>
+                    </div>
                 </nb-card-body>
             </nb-card>
         </div>

@@ -6,8 +6,10 @@
                     Information: </b>
             </div>
             <div class="col">
-                <button class="float-right" size="small" status="primary" routerLink="/pages/settings" nbButton>Edit
-                    Profile Settings
+                <button status="primary" size="small" class="float-right" routerLink="/pages/settings" nbButton
+                        nbPopover="Update your personal information"
+                        nbPopoverTrigger="hover" nbPopoverPlacement="bottom">
+                    <img class="mr-2" src="https://img.icons8.com/fluent/25/000000/settings.png"/>Setting
                 </button>
             </div>
         </div>
@@ -46,41 +48,25 @@
     </nb-card-body>
 </nb-card>
 <nb-card>
+    <nb-card-header><b>Your Favourite Stacks: </b></nb-card-header>
     <nb-card-body>
-
-        <nb-tabset fullWidth>
-            <nb-tab tabTitle="Your Stacks">
-                <nb-tag-list>
-                    <nb-tag status="primary" appearance="filled" *ngFor="let stack of currentStacks"
-                            text="{{stack}}"></nb-tag>
-                </nb-tag-list>
-            </nb-tab>
-            <nb-tab tabTitle="Update Stacks">
-                <p>Please enlist your stacks which you are the strongest. Based on your stacks we will </p>
-                <p>rank the most relevant companies for you. We update the ranking every <b>1-week</b> interval.</p>
-                <ngx-stacks-update></ngx-stacks-update>
-            </nb-tab>
-        </nb-tabset>
+        <nb-tag-list>
+            <nb-tag status="primary" appearance="filled" *ngFor="let stack of currentStacks"
+                    text="{{stack}}"></nb-tag>
+        </nb-tag-list>
     </nb-card-body>
 </nb-card>
-<div class="row">
-    <div class="col-sm-6">
-        <nb-card size="tiny">
-            <nb-badge text="New Feature" status="success" position="top right"></nb-badge>
-            <nb-card-header>
-                <p><b><img class="mr-2" src="https://img.icons8.com/fluent/30/000000/submit-resume.png"/>Upload
-                    Your Resume</b></p>
-            </nb-card-header>
-        </nb-card>
-    </div>
-    <div class="col-sm-6">
-        <nb-card size="tiny" status="warning">
-            <nb-card-header><p><b>Information About Resume Upload</b></p></nb-card-header>
-            <nb-card-body>
-                <p>You can also upload your CV. The system will collect stacks from your CV and recommend the most
-                    relevant companies for you. Please be patient. It will take 5-6 minutes to review your CV and update
-                    stacks accordingly.</p>
-            </nb-card-body>
-        </nb-card>
-    </div>
-</div>
+<nb-card>
+    <nb-badge text="New Feature" status="success" position="top right"></nb-badge>
+    <nb-card-header>
+        <p><b><img class="mr-2" src="https://img.icons8.com/fluent/30/000000/submit-resume.png"/>Upload
+            Your Resume: </b></p>
+    </nb-card-header>
+    <nb-card-body>
+        <p>You can also upload your CV. The system will collect stacks from your CV and recommend the most
+            relevant companies for you. Please be patient. It will take 5-6 minutes to review your CV and update
+            stacks accordingly.</p>
+        <ngx-cv-uploader></ngx-cv-uploader>
+    </nb-card-body>
+</nb-card>
+

@@ -1,6 +1,6 @@
 import { __decorate } from "tslib";
 import { NgModule } from '@angular/core';
-import { NbAutocompleteModule, NbBadgeModule, NbButtonModule, NbCardModule, NbInputModule, NbListModule, NbMenuModule, NbStepperModule, NbTabsetModule, NbTagModule, } from '@nebular/theme';
+import { NbAutocompleteModule, NbBadgeModule, NbButtonModule, NbCardModule, NbIconModule, NbInputModule, NbListModule, NbMenuModule, NbPopoverModule, NbSpinnerModule, NbStepperModule, NbTabsetModule, NbTagModule, } from '@nebular/theme';
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
 import { PagesRoutingModule } from './pages-routing.module';
@@ -12,6 +12,8 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddCompanyComponent } from './add-company/add-company.component';
 let PagesModule = class PagesModule {
 };
 PagesModule = __decorate([
@@ -32,6 +34,9 @@ PagesModule = __decorate([
             ReactiveFormsModule,
             NbButtonModule,
             ChartsModule,
+            NbSpinnerModule,
+            NbPopoverModule,
+            NbIconModule,
         ],
         declarations: [
             PagesComponent,
@@ -40,6 +45,8 @@ PagesModule = __decorate([
             SettingsComponent,
             UpdateProfileComponent,
             SignUpComponent,
+            DashboardComponent,
+            AddCompanyComponent,
         ],
         exports: [
             SignUpComponent,

@@ -1,15 +1,30 @@
 <div class="infinite-cards row">
-  <div class="col-md-12 col-lg-12 col-xxxl-12">
-    <nb-card [nbSpinner]="loading" nbSpinnerStatus="danger" class="own-scroll">
-      <nb-card-header>Companies</nb-card-header>
-      <nb-list
-        nbInfiniteList
-        [threshold]="500"
-        (bottomThreshold)="loadNext(firstCard)">
-        <nb-list-item *ngFor="let newsPost of firstCard.news">
-          <ngx-news-post style="width: 100%" [post]="newsPost"></ngx-news-post>
-        </nb-list-item>
-      </nb-list>
-    </nb-card>
-  </div>
+    <div class="col-md-12 col-lg-12 col-xxxl-12">
+        <nb-card accent="info" [nbSpinner]="loading" nbSpinnerStatus="danger" class="own-scroll">
+            <nb-card-header>Companies</nb-card-header>
+            <nb-tag-list (tagRemove)="onTagRemove($event)">
+                <nb-tag *ngFor="let stack of stacks" [text]="stack"
+                        appearance="filled" status="primary" removable></nb-tag>
+                <input #autoInput
+                       (input)="onChange()" (tagAdd)="onTagAdd($event)"
+                       [nbAutocomplete]="auto"
+                       fullWidth
+                       nbInput nbTagInput placeholder="Enter your favourite stacks..." type="text">
+                <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
+                    <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+                        {{ option }}
+                    </nb-option>
+                </nb-autocomplete>
+            </nb-tag-list>
+            <nb-list class="mt-3"
+                     nbInfiniteList
+                     [threshold]="500"
+                     (bottomThreshold)="loadNext(firstCard)">
+                <nb-list-item *ngFor="let newsPost of firstCard.news">
+                    <ngx-news-post style="width: 100%" [post]="newsPost">
+                    </ngx-news-post>
+                </nb-list-item>
+            </nb-list>
+        </nb-card>
+    </div>
 </div>

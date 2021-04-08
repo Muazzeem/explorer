@@ -38,8 +38,27 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     currentTheme = 'default';
 
-    userMenu = [{icon: 'person', title: 'Profile', link: '/pages/profile'},
-        {icon: 'settings', title: 'Settings', link: '/pages/settings'}];
+    userMenu = [
+        {
+            icon: 'person',
+            title: 'Profile',
+            link: '/pages/profile',
+        },
+        {
+            icon: 'settings',
+            title: 'Settings',
+            link: '/pages/settings',
+        },
+        {
+            title: 'Privacy Policy',
+            icon: {icon: 'checkmark-outline', pack: 'eva'},
+        },
+        {
+            title: 'Add Company',
+            icon: 'layout',
+            link: '/pages/new-job-post',
+        },
+    ];
 
     constructor(private sidebarService: NbSidebarService,
                 private menuService: NbMenuService,

@@ -1,14 +1,29 @@
 <nb-card>
-    <nb-card-header>Form without labels</nb-card-header>
-    <nb-card-body>
-        <form>
+    <nb-card-header><b>SEND US A FEEDBACK</b></nb-card-header>
+    <nb-card-body class="mt-4">
+        <form autocomplete="off" [formGroup]="feedbacks" novalidate (ngSubmit)="onSubmit()">
             <div class="form-group">
-                <input type="text" nbInput fullWidth placeholder="Recipients">
+                <input type="text" nbInput fullWidth placeholder="Email" formControlName="email">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                    <div *ngIf="email.errors.required">
+                        <nb-alert class="col-md-6 mt-2" status="danger">Email must be required.</nb-alert>
+                    </div>
+                    <div *ngIf="email.errors.pattern">
+                        <nb-alert class="col-md-6 mt-2" status="danger">Email must be a valid email address.</nb-alert>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
-                <textarea nbInput fullWidth placeholder="Message"></textarea>
+                <textarea rows="3" nbInput fullWidth placeholder="Message" formControlName="feedback"></textarea>
+                <div *ngIf="feedback.invalid && (feedback.dirty || feedback.touched)">
+                    <div *ngIf="feedback.errors.required">
+                        <nb-alert class="col-md-6 mt-2" status="danger">We look forward to your feedback.</nb-alert>
+                    </div>
+                </div>
             </div>
-            <button type="submit" nbButton status="success">Send</button>
+            <button type="submit" [disabled]="!feedbacks.valid" class="float-right" nbButton status="success"><img
+                    class="mr-2" src="https://img.icons8.com/fluent/30/000000/filled-sent.png"/>Send
+            </button>
         </form>
     </nb-card-body>
 </nb-card>

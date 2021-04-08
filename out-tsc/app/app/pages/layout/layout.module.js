@@ -1,7 +1,7 @@
 import { __decorate } from "tslib";
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NbAccordionModule, NbButtonModule, NbCardModule, NbListModule, NbRouteTabsetModule, NbStepperModule, NbTabsetModule, NbTagModule, NbUserModule, } from '@nebular/theme';
+import { NbAccordionModule, NbActionsModule, NbAutocompleteModule, NbBadgeModule, NbButtonModule, NbCardModule, NbInputModule, NbListModule, NbPopoverModule, NbProgressBarModule, NbRadioModule, NbRouteTabsetModule, NbSelectModule, NbSpinnerModule, NbStepperModule, NbTabsetModule, NbTagModule, NbUserModule, } from '@nebular/theme';
 import { ThemeModule } from '../../@theme/theme.module';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
@@ -27,6 +27,15 @@ LayoutModule = __decorate([
             NbUserModule,
             LayoutRoutingModule,
             NbTagModule,
+            NbSpinnerModule,
+            NbRadioModule,
+            NbPopoverModule,
+            NbAutocompleteModule,
+            NbInputModule,
+            NbSelectModule,
+            NbActionsModule,
+            NbProgressBarModule,
+            NbBadgeModule,
         ],
         declarations: [
             LayoutComponent,

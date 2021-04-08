@@ -1,0 +1,12 @@
+<ngx-awesome-uploader #uploader
+                      [adapter]="adapter"
+                      [totalMaxSize]="4"
+                      [accept]="'image/*,application/pdf'"
+                      (fileAdded)="onFileAdded($event)"
+                      (fileRemoved)="onFileRemoved($event)"
+                      (uploadSuccess)="onUploadSuccess($event)"
+                      (uploadFail)="onUploadFail($event)"
+                      (removeSuccess)="onRemoveSuccess($event)"
+                      (validationError)="onValidationError($event)"
+                      [enableAutoUpload]="true">
+</ngx-awesome-uploader>

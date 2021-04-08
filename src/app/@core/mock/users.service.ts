@@ -27,8 +27,8 @@ export class UserService extends UserData {
         return this.apiService.get(this.stacksUrl);
     }
 
-    updateStacks(): Observable<any> {
-        return this.apiService.put(this.stacksUrl, {});
+    updateStacks(stacks): Observable<any> {
+        return this.apiService.put(this.stacksUrl, stacks);
     }
 
     getProfile(): Observable<any> {
@@ -72,7 +72,6 @@ export class UserService extends UserData {
 
     // Update the user on the server (email, pass, etc)
     update(user): Observable<any> {
-        console.warn('User ' + user);
         return this.apiService
             .put('/api/user/user-info', user)
             .pipe(map(data => {

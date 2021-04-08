@@ -22,7 +22,6 @@ let UpdateProfileComponent = class UpdateProfileComponent {
     }
     ngOnInit() {
         Object.assign(this.user, this.userService.getCurrentUser());
-        console.warn(this.user['profile']);
         this.settingsForm.patchValue(this.user['profile']);
     }
     submitForm() {
@@ -31,7 +30,7 @@ let UpdateProfileComponent = class UpdateProfileComponent {
         this.updateUser(this.settingsForm.value);
         this.userService
             .update(this.user['profile'])
-            .subscribe(() => this.router.navigateByUrl('pages/profile/'), err => {
+            .subscribe(() => this.router.navigateByUrl('pages/profile'), err => {
             this.errors = err;
             this.isSubmitting = false;
         });

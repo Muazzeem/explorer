@@ -37,8 +37,27 @@ let HeaderComponent = class HeaderComponent {
             },
         ];
         this.currentTheme = 'default';
-        this.userMenu = [{ icon: 'person', title: 'Profile', link: '/pages/profile' },
-            { icon: 'settings', title: 'Settings', link: '/pages/settings' }];
+        this.userMenu = [
+            {
+                icon: 'person',
+                title: 'Profile',
+                link: '/pages/profile',
+            },
+            {
+                icon: 'settings',
+                title: 'Settings',
+                link: '/pages/settings',
+            },
+            {
+                title: 'Privacy Policy',
+                icon: { icon: 'checkmark-outline', pack: 'eva' },
+            },
+            {
+                title: 'Add Company',
+                icon: 'layout',
+                link: '/pages/new-job-post',
+            },
+        ];
     }
     login() {
         this.dialog.open();

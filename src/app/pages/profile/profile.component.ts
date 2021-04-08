@@ -22,17 +22,19 @@ export class ProfileComponent implements OnInit {
     }
 
     currentUser: any;
-    currentStacks: any[];
+    currentStacks: [];
 
     userStacksLists() {
         this.userService.getStacks().subscribe(
             data => {
                 this.currentStacks = data;
                 const sorted = this.currentStacks.sort();
+                console.warn(this.currentStacks);
             },
         );
 
     }
+
     ngOnInit() {
         this.route.data.pipe(
             concatMap((data: { profile: Profile }) => {

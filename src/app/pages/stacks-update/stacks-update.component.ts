@@ -3,6 +3,7 @@ import {NbTagComponent, NbTagInputAddEvent} from '@nebular/theme';
 import {Observable, of} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {ApiService} from '../../@core/mock/api.service';
+import {UserService} from '../../@core/mock/users.service';
 
 @Component({
     selector: 'ngx-stacks-update',
@@ -12,14 +13,15 @@ import {ApiService} from '../../@core/mock/api.service';
 })
 export class StacksUpdateComponent implements OnInit {
     options: string[];
+    currentStacks: [];
     filteredOptions$: Observable<string[]>;
     stackList = '/api/valid-tags';
     @ViewChild('autoInput') input;
 
-    constructor(private apiService: ApiService) {
+    constructor(private apiService: ApiService, private userService: UserService) {
     }
-
-    stacks: Set<string> = new Set();
+    stack = ['python'];
+    stacks: Set<string> = new Set(this.stack);
 
     onTagRemove(tagToRemove: NbTagComponent): void {
         this.stacks.delete(tagToRemove.text);
@@ -35,8 +37,8 @@ export class StacksUpdateComponent implements OnInit {
 
     ngOnInit(): void {
         this.apiService.get(this.stackList).subscribe((data: any) => {
-            this.options = data.stacks;
             this.filteredOptions$ = of(this.options);
+            this.userStacksLists();
         });
     }
 
@@ -59,4 +61,18 @@ export class StacksUpdateComponent implements OnInit {
         this.filteredOptions$ = this.getFilteredOptions($event);
     }
 
+    userStacksLists() {
+        this.userService.getStacks().subscribe(
+            data => {
+                this.currentStacks = data;
+                console.warn(this.currentStacks);
+                const sorted = this.currentStacks.sort();
+            },
+        );
+
+    }
+
+    submit() {
+        console.warn(this.stacks);
+    }
 }

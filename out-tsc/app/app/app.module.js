@@ -7,7 +7,7 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NbDatepickerModule, NbDialogModule, NbMenuModule, NbSidebarModule, NbStepperModule, NbToastrModule, NbWindowModule, } from '@nebular/theme';
+import { NbDialogModule, NbMenuModule, NbSidebarModule, NbStepperModule, NbToastrModule, NbWindowModule, NbCardModule, } from '@nebular/theme';
 import { ApiService } from './@core/mock/api.service';
 import { JwtService } from './@core/mock';
 import { UserService } from './@core/mock/users.service';
@@ -30,7 +30,7 @@ AppModule = __decorate([
             AppRoutingModule,
             NbSidebarModule.forRoot(),
             NbMenuModule.forRoot(),
-            NbDatepickerModule.forRoot(),
+            NbCardModule,
             NbDialogModule.forRoot(),
             NbWindowModule.forRoot(),
             NbToastrModule.forRoot(),

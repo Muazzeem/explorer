@@ -1,23 +1,29 @@
-<article>
-    <h6>{{post['name']}}</h6>
-    <p><a href="{{post['web']}}">{{post['web']}}</a></p>
-    <p>{{post['address']}}</p>
-</article>
-<nb-accordion>
-    <nb-accordion-item>
-        <nb-accordion-item-header>
-            See More...
-        </nb-accordion-item-header>
-        <nb-accordion-item-body>
-            <p><b>Stacks: </b>
-                <nb-tag *ngFor="let temp2 of post['stacks']"
-                        status="info" appearance="outline" text="{{temp2}}"></nb-tag>
-            </p>
-            <p><b>Positions: </b>
-                <nb-tag *ngFor="let temp2 of post['positions']"
-                        status="primary" appearance="outline" text="{{temp2}}"></nb-tag>
-            </p>
-            <p><b>Business: </b> {{post['business']}}</p>
-        </nb-accordion-item-body>
-    </nb-accordion-item>
-</nb-accordion>
+<ng-template #contentTemplate let-data>
+    <p><img src="https://img.icons8.com/fluent/25/000000/link.png"/><a target="_blank"
+                                                                       href="{{post['web']}}">{{post['web']}}</a></p>
+    <p><b>Positions: </b>
+        <nb-tag class="ml-1 mt-1" *ngFor="let temp2 of post['positions']"
+                status="primary" appearance="outline" text="{{temp2}}"></nb-tag>
+    </p>
+    <p *ngIf="!showbusiness"><b>Business: </b>
+        {{(showMore) ? businessText : businessText | slice:0:200}}
+        <span *ngIf="!showMore">...</span>
+        <a href="javascript:" *ngIf="!showMore" (click)="showMore=true">See More</a>
+    </p>
+    <ngb-rating [max]="5" style="font-size: 30px; color: #ffcc00" [formControl]="ctrl"></ngb-rating>
+    <div class="form-text small">
+        <p *ngIf="ctrl.valid">Rate: <b>{{ctrl.value}}</b></p>
+        <div *ngIf="ctrl.valid" class="text-success">Thanks!</div>
+        <div *ngIf="ctrl.invalid" class="text-danger">Please rate us</div>
+    </div>
+</ng-template>
+
+<a style="cursor: pointer" (click)="openWindow()">
+    <article>
+        <h6>{{post['name']}}</h6>
+        <p>{{post['address']}}</p>
+        <nb-tag class="ml-1 mt-1" *ngFor="let temp2 of post['stacks']"
+                status="info" appearance="outline" text="{{temp2}}"></nb-tag>
+    </article>
+</a>
+

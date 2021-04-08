@@ -7,6 +7,7 @@ import { NotFoundComponent } from './miscellaneous/not-found/not-found.component
 import { ProfileComponent } from './profile/profile.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { SettingsComponent } from './settings/settings.component';
+import { AddCompanyComponent } from './add-company/add-company.component';
 const routes = [{
         path: '',
         component: PagesComponent,
@@ -26,6 +27,10 @@ const routes = [{
             {
                 path: 'login',
                 component: SignUpComponent,
+            },
+            {
+                path: 'new-job-post',
+                component: AddCompanyComponent,
             },
             {
                 path: 'layout',

@@ -1,17 +1,27 @@
 <nb-card>
-    <nb-card-header><b>Your Settings</b></nb-card-header>
+    <nb-card-header><b><img class="mr-2" src="https://img.icons8.com/fluent/25/000000/settings.png"/>Your Settings</b>
+    </nb-card-header>
     <nb-card-body>
         <form [formGroup]="settingsForm" (ngSubmit)="submitForm()">
             <fieldset [disabled]="isSubmitting">
                 <input type="text" nbInput fullWidth placeholder="Name" formControlName="name">
                 <div class="full-name-inputs">
-                    <input type="email" nbInput fullWidth placeholder="Email" formControlName="email">
+                    <input type="email" nbInput fullWidth placeholder="Email" formControlName="email" disabled>
                     <input type="text" nbInput fullWidth placeholder="Phone" formControlName="phone">
                 </div>
-                <textarea rows="4" nbInput fullWidth placeholder="Text Area" formControlName="address"></textarea>
-                <button nbButton status="success">Success</button>
+                <textarea rows="4" nbInput fullWidth placeholder="Address" formControlName="address"></textarea>
+                <button class="float-right" nbButton status="success">Success</button>
             </fieldset>
         </form>
+    </nb-card-body>
+</nb-card>
+
+<nb-card>
+    <nb-card-header><b>Update Stacks</b></nb-card-header>
+    <nb-card-body>
+        <p>Please enlist your stacks which you are the strongest. Based on your stacks we will </p>
+        <p>rank the most relevant companies for you. We update the ranking every <b>1-week</b> interval.</p>
+        <ngx-stacks-update></ngx-stacks-update>
     </nb-card-body>
 </nb-card>
 

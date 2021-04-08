@@ -2,9 +2,9 @@ import {NgModule} from '@angular/core';
 import {
     NbAutocompleteModule,
     NbBadgeModule, NbButtonModule,
-    NbCardModule, NbInputModule,
+    NbCardModule, NbIconModule, NbInputModule,
     NbListModule,
-    NbMenuModule, NbSpinnerModule, NbStepperModule,
+    NbMenuModule, NbPopoverModule, NbSpinnerModule, NbStepperModule,
     NbTabsetModule,
     NbTagModule,
 } from '@nebular/theme';
@@ -21,8 +21,10 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {ChartsModule} from 'ng2-charts';
 import {SignUpComponent} from './sign-up/sign-up.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {ChartsComponent} from './dashboard/charts/charts.component';
-
+import {AddCompanyComponent} from './add-company/add-company.component';
+import {CvUploaderComponent} from './cv-uploader/cv-uploader.component';
+import {FilePickerModule} from 'ngx-awesome-uploader';
+import {RatingModule} from 'ng-starrating';
 
 @NgModule({
     imports: [
@@ -42,6 +44,10 @@ import {ChartsComponent} from './dashboard/charts/charts.component';
         NbButtonModule,
         ChartsModule,
         NbSpinnerModule,
+        NbPopoverModule,
+        NbIconModule,
+        FilePickerModule,
+        RatingModule,
     ],
     declarations: [
         PagesComponent,
@@ -51,12 +57,12 @@ import {ChartsComponent} from './dashboard/charts/charts.component';
         UpdateProfileComponent,
         SignUpComponent,
         DashboardComponent,
-        ChartsComponent,
+        AddCompanyComponent,
+        CvUploaderComponent,
     ],
     exports: [
         SignUpComponent,
         UpdateProfileComponent,
-        ChartsComponent,
     ],
 })
 export class PagesModule {
