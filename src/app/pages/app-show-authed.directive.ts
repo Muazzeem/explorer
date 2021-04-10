@@ -8,10 +8,10 @@ import {
 import {UserService} from '../@core/mock/users.service';
 
 
-@Directive(
-    {selector: 'ngx-appShowAuthed'},
-)
-export class ShowAuthedDirective implements OnInit {
+@Directive({
+    selector: '[ngxAppShowAuthed]',
+})
+export class AppShowAuthedDirective implements OnInit {
     constructor(
         private templateRef: TemplateRef<any>,
         private userService: UserService,

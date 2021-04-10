@@ -16,12 +16,15 @@ import {Profile, User} from '../../@core/models';
     `],
 })
 export class ProfileComponent implements OnInit {
+    profile: any;
+    currentUser: User;
+    isUser: boolean;
+
     constructor(private userService: UserService,
                 private route: ActivatedRoute,
     ) {
     }
 
-    currentUser: any;
     currentStacks: [];
 
     userStacksLists() {
@@ -37,16 +40,18 @@ export class ProfileComponent implements OnInit {
 
     ngOnInit() {
         this.route.data.pipe(
-            concatMap((data: { profile: Profile }) => {
+            concatMap((data) => {
+                this.profile = data;
                 // Load the current user's data.
                 return this.userService.currentUser.pipe(tap(
                     (userData: User) => {
                         this.currentUser = userData;
+                        console.warn(this.profile.username);
+                        this.isUser = (this.currentUser.username === this.profile.username);
                     },
                 ));
             }),
         ).subscribe();
-        this.userStacksLists();
     }
 
 }

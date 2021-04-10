@@ -76,8 +76,9 @@ export class UserService extends UserData {
             .put('/api/user/user-info', user)
             .pipe(map(data => {
                 // Update the currentUser observable
-                this.currentUserSubject.next(data.user);
-                return data.user;
+                this.currentUserSubject.next(data);
+                console.warn(data);
+                return data;
             }));
     }
 

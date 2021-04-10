@@ -14,11 +14,11 @@ import {ThemeModule} from '../../@theme/theme.module';
 import {LayoutRoutingModule} from './layout-routing.module';
 import {LayoutComponent} from './layout.component';
 import {InfiniteListComponent} from './infinite-list/infinite-list.component';
-import {NewsPostComponent} from './infinite-list/news-post/news-post.component';
 import {NewsService} from './news.service';
 import {RecommendCompaniesComponent} from './recommend-companies/recommend-companies.component';
-import {RatingModule} from "ng-starrating";
-import {NgbRatingModule} from "@ng-bootstrap/ng-bootstrap";
+import {RatingModule} from 'ng-starrating';
+import {NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
+import {NewsPostComponent} from './infinite-list/news-post/news-post.component';
 
 @NgModule({
     imports: [

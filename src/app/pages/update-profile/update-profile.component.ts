@@ -30,16 +30,15 @@ export class UpdateProfileComponent implements OnInit {
 
     ngOnInit() {
         Object.assign(this.user, this.userService.getCurrentUser());
-        this.settingsForm.patchValue(this.user['profile']);
+        this.settingsForm.patchValue(this.user);
     }
 
     submitForm() {
         this.isSubmitting = true;
-        // update the model
         this.updateUser(this.settingsForm.value);
 
         this.userService
-            .update(this.user['profile'])
+            .update(this.user)
             .subscribe(
                 () => this.router.navigateByUrl('pages/profile'),
                 err => {

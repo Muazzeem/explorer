@@ -25,11 +25,11 @@ import {
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {environment} from '../environments/environment';
 import {HttpTokenInterceptor} from './pages/interceptors';
-import {ShowAuthedDirective} from './@theme/show-authed.directive';
+import {AppShowAuthedDirective} from './pages/app-show-authed.directive';
 
 
 @NgModule({
-    declarations: [AppComponent, ShowAuthedDirective],
+    declarations: [AppComponent, AppShowAuthedDirective],
     imports: [
         SocialLoginModule,
         BrowserModule,
