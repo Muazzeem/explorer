@@ -52,6 +52,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         {
             title: 'Privacy Policy',
             icon: {icon: 'checkmark-outline', pack: 'eva'},
+            link: '/pages/policy',
         },
         {
             title: 'Add Company',

@@ -25,6 +25,7 @@ import {AddCompanyComponent} from './add-company/add-company.component';
 import {CvUploaderComponent} from './cv-uploader/cv-uploader.component';
 import {FilePickerModule} from 'ngx-awesome-uploader';
 import {RatingModule} from 'ng-starrating';
+import {PolicyComponent} from './policy/policy.component';
 
 @NgModule({
     imports: [
@@ -59,6 +60,7 @@ import {RatingModule} from 'ng-starrating';
         DashboardComponent,
         AddCompanyComponent,
         CvUploaderComponent,
+        PolicyComponent,
     ],
     exports: [
         SignUpComponent,
