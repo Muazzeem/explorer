@@ -16,28 +16,5 @@ export class AddCompanyComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.firstForm = this.fb.group({
-            firstCtrl: ['', Validators.required],
-        });
-
-        this.secondForm = this.fb.group({
-            secondCtrl: ['', Validators.required],
-        });
-
-        this.thirdForm = this.fb.group({
-            thirdCtrl: ['', Validators.required],
-        });
-    }
-
-    onFirstSubmit() {
-        this.firstForm.markAsDirty();
-    }
-
-    onSecondSubmit() {
-        this.secondForm.markAsDirty();
-    }
-
-    onThirdSubmit() {
-        this.thirdForm.markAsDirty();
     }
 }

@@ -13,7 +13,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     },
     {
         title: 'Companies',
-        icon: 'grid',
+        icon: 'list-outline',
         children: [
             {
                 title: 'Companies List',
@@ -24,5 +24,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
                 link: '/pages/layout/recommend',
             },
         ],
+    },
+    {
+        title: 'Add Company',
+        icon: {icon: 'plus-outline'},
+        link: '/pages/new-job-post',
+    },
+    {
+        title: 'Privacy Policy',
+        icon: {icon: 'checkmark-outline', pack: 'eva'},
+        link: '/pages/policy',
     },
 ];

@@ -49,16 +49,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
             title: 'Settings',
             link: '/pages/settings',
         },
-        {
-            title: 'Privacy Policy',
-            icon: {icon: 'checkmark-outline', pack: 'eva'},
-            link: '/pages/policy',
-        },
-        {
-            title: 'Add Company',
-            icon: 'layout',
-            link: '/pages/new-job-post',
-        },
     ];
 
     constructor(private sidebarService: NbSidebarService,
@@ -68,7 +58,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
                 private breakpointService: NbMediaBreakpointsService,
                 private dialog: DialogService,
                 private userService: UserService,
-                private route: Router,
     ) {
     }
 

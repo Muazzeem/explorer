@@ -17,8 +17,8 @@ import {LogoutdialogDialogComponent} from '../modal-overlays/dialog/log-out-dial
 })
 export class SignUpComponent implements OnInit {
     loginURL = `/api/user/get-token`;
-    private currentSocialUserSubject = new BehaviorSubject<any>({} as any);
-    public currentSocialUser = this.currentSocialUserSubject.asObservable().pipe(distinctUntilChanged());
+    private currentUserSubject = new BehaviorSubject<any>({} as any);
+    public currentUser = this.currentUserSubject.asObservable().pipe(distinctUntilChanged());
 
     constructor(private userService: UserService,
                 private apiService: ApiService,
@@ -29,7 +29,7 @@ export class SignUpComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.currentSocialUser.subscribe(data => {
+        this.currentUserSubject.subscribe(data => {
             this.apiService.post(this.loginURL, data).subscribe(
                 // tslint:disable-next-line:no-shadowed-variable
                 data => {
@@ -44,7 +44,7 @@ export class SignUpComponent implements OnInit {
     // tslint:disable-next-line:typedef
     signInWithFB() {
         this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(async user => {
-            await this.currentSocialUserSubject.next({provider: user.provider, token: user.authToken});
+            await this.currentUserSubject.next({provider: user.provider, token: user.authToken});
             this.toastrService.showToast('Welcome ' + user.name, '');
             this.ref.close();
         });
@@ -53,7 +53,7 @@ export class SignUpComponent implements OnInit {
     // tslint:disable-next-line:typedef
     signInWithGoogle() {
         this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(async user => {
-            await this.currentSocialUserSubject.next({provider: user.provider, token: user.idToken});
+            await this.currentUserSubject.next({provider: user.provider, token: user.idToken});
             this.toastrService.showToast('Welcome ' + user.name, '');
             this.ref.close();
         });

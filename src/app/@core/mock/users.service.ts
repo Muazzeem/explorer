@@ -1,4 +1,4 @@
-import {of as observableOf, Observable, BehaviorSubject, ReplaySubject} from 'rxjs';
+import {BehaviorSubject, Observable, ReplaySubject} from 'rxjs';
 import {Injectable} from '@angular/core';
 import {Contacts, RecentUsers, User, UserData} from '../data/users';
 import {distinctUntilChanged, map} from 'rxjs/operators';
@@ -77,7 +77,6 @@ export class UserService extends UserData {
             .pipe(map(data => {
                 // Update the currentUser observable
                 this.currentUserSubject.next(data);
-                console.warn(data);
                 return data;
             }));
     }
@@ -86,6 +85,7 @@ export class UserService extends UserData {
         return undefined;
     }
 
+    // @ts-ignore
     getRecentUsers(): Observable<RecentUsers[]> {
         return undefined;
     }

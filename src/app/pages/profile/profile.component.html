@@ -9,7 +9,8 @@
                 <button status="primary" size="small" class="float-right" routerLink="/pages/settings" nbButton
                         nbPopover="Update your personal information"
                         nbPopoverTrigger="hover" nbPopoverPlacement="bottom">
-                    <img class="mr-2" src="https://img.icons8.com/fluent/25/000000/settings.png"/>Setting
+                    <nb-icon icon="settings-outline"></nb-icon>
+                    Setting
                 </button>
             </div>
         </div>
@@ -25,22 +26,20 @@
             <div class="col-sm-8">
                 <nb-list>
                     <nb-list-item>
-                        <p>
-                            <img src="https://img.icons8.com/fluent/30/000000/username.png"/> {{currentUser?.name}}
-                        </p>
+                        <nb-icon icon="person-outline" [options]="{ animation: { type: 'zoom' } }"></nb-icon>
+                        {{currentUser?.name}}
                     </nb-list-item>
                     <nb-list-item>
-                        <p><img src="https://img.icons8.com/fluent/30/000000/email.png"/> {{currentUser?.email}}
-                        </p>
+                        <nb-icon icon="at-outline" [options]="{ animation: { type: 'zoom' } }"></nb-icon>
+                        {{currentUser?.email}}
                     </nb-list-item>
                     <nb-list-item>
-                        <p>
-                            <img src="https://img.icons8.com/fluent/30/000000/address.png"/> {{currentUser?.address}}
-                        </p>
+                        <nb-icon icon="pin-outline" [options]="{ animation: { type: 'zoom' } }"></nb-icon>
+                        {{currentUser?.address}}
                     </nb-list-item>
                     <nb-list-item>
-                        <p><img src="https://img.icons8.com/fluent/30/000000/phone.png"/> {{currentUser?.phone}}
-                        </p>
+                        <nb-icon icon="phone-outline" [options]="{ animation: { type: 'zoom' } }"></nb-icon>
+                        {{currentUser?.phone}}
                     </nb-list-item>
                 </nb-list>
             </div>
@@ -59,8 +58,8 @@
 <nb-card>
     <nb-badge text="New Feature" status="success" position="top right"></nb-badge>
     <nb-card-header>
-        <p><b><img class="mr-2" src="https://img.icons8.com/fluent/30/000000/submit-resume.png"/>Upload
-            Your Resume: </b></p>
+        <nb-icon icon="attach-outline" [options]="{ animation: { type: 'zoom' } }"></nb-icon>
+        <b>Upload Your Resume: </b>
     </nb-card-header>
     <nb-card-body>
         <p>You can also upload your CV. The system will collect stacks from your CV and recommend the most

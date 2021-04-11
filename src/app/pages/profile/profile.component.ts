@@ -18,6 +18,7 @@ import {Profile, User} from '../../@core/models';
 export class ProfileComponent implements OnInit {
     profile: any;
     currentUser: User;
+    user: User = {} as User;
     isUser: boolean;
 
     constructor(private userService: UserService,
@@ -46,12 +47,12 @@ export class ProfileComponent implements OnInit {
                 return this.userService.currentUser.pipe(tap(
                     (userData: User) => {
                         this.currentUser = userData;
-                        console.warn(this.profile.username);
                         this.isUser = (this.currentUser.username === this.profile.username);
                     },
                 ));
             }),
         ).subscribe();
+        console.warn(this.userService.getRecentUsers());
     }
 
 }

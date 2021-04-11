@@ -1,62 +1,51 @@
-<nb-card>
-    <nb-card-header style="position: relative;">
-        <nb-badge text="New Feature" status="success" position="top right"></nb-badge>
-        <b>Add New Company</b>
+<nb-card size="large">
+    <nb-card-header><b>
+        <nb-icon icon="plus-circle-outline" [options]="{ animation: { type: 'zoom' } }"></nb-icon>
+        Add New Company</b>
     </nb-card-header>
     <nb-card-body>
-        <nb-stepper #stepper>
-            <nb-step [stepControl]="firstForm" label="First step">
-                <form [formGroup]="firstForm" (ngSubmit)="onFirstSubmit()" class="step-container">
-                    <p class="lorem">
-
-                    </p>
-                    <input type="text" nbInput fullWidth placeholder="Company Name" formControlName="firstCtrl">
-                    <div class="full-name-inputs">
-                        <input type="text" nbInput fullWidth placeholder="Web Address">
-                        <input type="email" nbInput fullWidth placeholder="Email Address">
-                    </div>
-                    <button nbButton nbStepperNext>next</button>
-                </form>
-            </nb-step>
-            <nb-step [stepControl]="secondForm" label="Second step">
-                <form [formGroup]="secondForm" (ngSubmit)="onSecondSubmit()" class="step-container">
-                    <p class="lorem">
-                        Pellentesque we gonna chung tortor.
-                        Sizzle pizzle. Fizzle izzle dolor dapibus fo shizzle mah nizzle fo rizzle, mah home g-dizzle
-                        tempus tempor.
-                        Maurizzle cool nibh owned turpizzle. My shizz fo shizzle tortor.
-                    </p>
-                    <div class="input-group">
-                        <input nbInput type="text" placeholder="Enter favorite movie" class="form-control"
-                               formControlName="secondCtrl"
-                               [ngClass]="{'form-control-danger': secondForm.invalid && (secondForm.dirty || secondForm.touched)}">
-                    </div>
-                    <button nbButton nbStepperPrevious>prev</button>
-                    <button nbButton nbStepperNext>next</button>
-                </form>
-            </nb-step>
-            <nb-step [stepControl]="thirdForm" label="Third step">
-                <form [formGroup]="thirdForm" (ngSubmit)="onThirdSubmit()" class="step-container">
-                    <p class="lorem">
-                        Things boom shackalack rhoncus yo. In fo shizzle my nizzle gangsta platea dictumst. Check it out
-                        pot.
-                    </p>
-                    <div class="input-group">
-                        <input nbInput type="text" placeholder="Enter something" class="form-control"
-                               formControlName="thirdCtrl"
-                               [ngClass]="{'form-control-danger': thirdForm.invalid && (thirdForm.dirty || thirdForm.touched)}">
-                    </div>
-                    <button nbButton nbStepperPrevious>prev</button>
-                    <button nbButton nbStepperNext>Confirm</button>
-                </form>
-            </nb-step>
-            <nb-step [stepControl]="thirdForm" [hidden]="true" label="Third step">
-                <div class="step-container">
-                    <h3>Wizard completed!</h3>
-                    <button nbButton (click)="stepper.reset()">Try again</button>
+        <label for="companyName" class="label">Company Name</label>
+        <input type="text" nbInput id="companyName" fullWidth placeholder="Full width">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="emailAddress" class="label">Email Address</label>
+                    <input type="email" nbInput fullWidth id="emailAddress" placeholder="Email">
                 </div>
-            </nb-step>
-        </nb-stepper>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="webAddress" class="label">Website</label>
+                    <input type="text" nbInput fullWidth id="webAddress" placeholder="Website">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="position" class="label">Position</label>
+                    <input type="text" nbInput fullWidth id="position" placeholder="Position">
+                </div>
+                <div class="form-group">
+                    <label for="address" class="label">Address</label>
+                    <textarea nbInput rows="3" id="address" fullWidth placeholder="Textarea"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="stacks" class="label">Stacks</label>
+                    <input type="text" nbInput fullWidth id="stacks" placeholder="stacks">
+                </div>
+                <div class="form-group">
+                    <label for="business" class="label">Business</label>
+                    <textarea nbInput rows="3" id="business" fullWidth placeholder="Textarea"></textarea>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="float-right" nbButton status="primary">
+            <nb-icon icon="checkmark-circle-outline"></nb-icon>
+            submit
+        </button>
     </nb-card-body>
 </nb-card>
 

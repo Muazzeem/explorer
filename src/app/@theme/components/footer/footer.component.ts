@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
       Created with ♥ by <b>Fractalslab</b> 2021
     </span>
     <div class="socials">
-      <img routerLink="/pages/forms/layouts" src="https://img.icons8.com/fluent/35/000000/feedback-hub.png"/>
+      <img routerLink="/pages/forms/feedback" src="https://img.icons8.com/fluent/35/000000/feedback-hub.png"/>
     </div>
   `,
 })
