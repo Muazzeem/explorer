@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
-    NbAccordionModule, NbActionsModule, NbAutocompleteModule, NbBadgeModule,
+    NbAccordionModule, NbActionsModule, NbAlertModule, NbAutocompleteModule, NbBadgeModule,
     NbButtonModule,
     NbCardModule, NbInputModule,
     NbListModule, NbPopoverModule, NbProgressBarModule, NbRadioModule,
@@ -14,7 +14,7 @@ import {ThemeModule} from '../../@theme/theme.module';
 import {LayoutRoutingModule} from './layout-routing.module';
 import {LayoutComponent} from './layout.component';
 import {InfiniteListComponent} from './infinite-list/infinite-list.component';
-import {NewsService} from './news.service';
+import {CompaniesService, RecommendCompanyService} from '../../@core/mock/companies.service';
 import {RecommendCompaniesComponent} from './recommend-companies/recommend-companies.component';
 import {RatingModule} from 'ng-starrating';
 import {NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
@@ -46,6 +46,7 @@ import {NewsPostComponent} from './infinite-list/news-post/news-post.component';
         NbBadgeModule,
         RatingModule,
         NgbRatingModule,
+        NbAlertModule,
     ],
     declarations: [
         LayoutComponent,
@@ -54,7 +55,8 @@ import {NewsPostComponent} from './infinite-list/news-post/news-post.component';
         RecommendCompaniesComponent,
     ],
     providers: [
-        NewsService,
+        CompaniesService,
+        RecommendCompanyService,
     ],
 })
 export class LayoutModule {

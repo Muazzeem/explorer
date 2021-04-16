@@ -1,6 +1,7 @@
 <div class="infinite-cards row">
     <div class="col-md-12 col-lg-12">
-        <nb-card class="own-scroll" [nbSpinner]="loading"
+        <nb-alert *ngIf="error" status="danger">{{error}}</nb-alert>
+        <nb-card *ngIf="!error" class="own-scroll" [nbSpinner]="loading"
                  nbSpinnerStatus="danger"
                  nbSpinnerSize="large"
                  nbSpinnerMessage="">
@@ -9,8 +10,17 @@
                     nbInfiniteList
                     [threshold]="500"
                     (bottomThreshold)="loadNext(firstCard)">
-                <nb-list-item *ngFor="let newsPost of firstCard.news">
-                    <ngx-news-post style="width: 100%" [post]="newsPost"></ngx-news-post>
+                <nb-list-item *ngFor="let companies of firstCard.news">
+                    <article>
+                        <a target="_blank" href="{{companies.company['web']}}">
+                            <h6>
+                                <nb-icon class="mr-2" icon="link-2-outline"></nb-icon>
+                                {{companies.company['name']}}</h6>
+                        </a>
+                        <p>{{companies.company['address']}}</p>
+                        <nb-tag class="ml-1 mt-1" *ngFor="let temp2 of companies.company['stacks']"
+                                status="info" appearance="outline" text="{{temp2}}"></nb-tag>
+                    </article>
                 </nb-list-item>
             </nb-list>
         </nb-card>

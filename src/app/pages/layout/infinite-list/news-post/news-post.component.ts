@@ -1,6 +1,6 @@
 import {TemplateRef, ViewChild, Component, OnInit, Input} from '@angular/core';
 import {NbWindowService} from '@nebular/theme';
-import {NewsPost} from '../../news.service';
+import {NewsPost} from '../../../../@core/mock/companies.service';
 import {FormControl, Validators} from '@angular/forms';
 
 @Component({

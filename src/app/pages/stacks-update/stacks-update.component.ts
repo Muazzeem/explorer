@@ -20,8 +20,7 @@ export class StacksUpdateComponent implements OnInit {
 
     constructor(private apiService: ApiService, private userService: UserService) {
     }
-    stack = ['python'];
-    stacks: Set<string> = new Set(this.stack);
+    stacks: Set<string> = new Set();
 
     onTagRemove(tagToRemove: NbTagComponent): void {
         this.stacks.delete(tagToRemove.text);
