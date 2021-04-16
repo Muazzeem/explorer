@@ -19,6 +19,7 @@ import {RecommendCompaniesComponent} from './recommend-companies/recommend-compa
 import {RatingModule} from 'ng-starrating';
 import {NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
 import {NewsPostComponent} from './infinite-list/news-post/news-post.component';
+import {StacksService} from '../../@core/mock/stacks.service';
 
 @NgModule({
     imports: [
@@ -57,6 +58,7 @@ import {NewsPostComponent} from './infinite-list/news-post/news-post.component';
     providers: [
         CompaniesService,
         RecommendCompanyService,
+        StacksService,
     ],
 })
 export class LayoutModule {

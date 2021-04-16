@@ -31,7 +31,6 @@ export class NewsPostComponent implements OnInit {
     openWindow() {
         this.windowService.open(
             this.contentTemplate,
-            {title: this.post['name'], context: {text: ''}},
         );
         this.businessText = this.post['business'];
         if (this.businessText.length === 0) {

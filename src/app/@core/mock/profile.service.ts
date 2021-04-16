@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProfileService {
   private profileURL = `/api/user/user-info`;
@@ -21,7 +21,7 @@ export class ProfileService {
         },
         err => {
           console.warn(err);
-        }
+        },
       );
   }
 }

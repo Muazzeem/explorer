@@ -2,6 +2,8 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {Observable, of} from 'rxjs';
 import {ApiService} from '../../../@core/mock/api.service';
 import {CompaniesService} from '../../../@core/mock/companies.service';
+import {NbTagComponent, NbTagInputAddEvent} from '@nebular/theme';
+import {StacksService} from '../../../@core/mock/stacks.service';
 
 @Component({
     selector: 'ngx-infinite-list',
@@ -20,8 +22,12 @@ export class InfiniteListComponent implements OnInit {
     stackList = '/api/valid-tags';
     filteredOptions$: Observable<string[]>;
     @ViewChild('autoInput') input;
+    trees: any;
 
-    constructor(private apiService: ApiService, private newsService: CompaniesService) {
+    constructor(private apiService: ApiService,
+                private newsService: CompaniesService,
+                private stackService: StacksService,
+    ) {
     }
 
     loadNext(cardData) {
@@ -41,7 +47,17 @@ export class InfiniteListComponent implements OnInit {
                 cardData.pageToLoadNext++;
             });
     }
+
     ngOnInit(): void {
         this.loading = false;
     }
+
+    onTagRemove(tagToRemove: NbTagComponent): void {
+        this.trees.delete(tagToRemove.text);
+    }
+
+    onTagAdd({value, input}): void {
+        this.trees = this.stackService.onTagAdd({value, input});
+    }
+
 }

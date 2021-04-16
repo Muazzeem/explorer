@@ -8,6 +8,7 @@ import {ApiService} from '../../@core/mock/api.service';
 import {ToastrService} from '../service/toastr.service';
 import {NbDialogRef} from '@nebular/theme';
 import {LogoutdialogDialogComponent} from '../modal-overlays/dialog/log-out-dialog/log-out-dialog.component';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -25,6 +26,7 @@ export class SignUpComponent implements OnInit {
                 private authService: SocialAuthService,
                 private toastrService: ToastrService,
                 protected ref: NbDialogRef<LogoutdialogDialogComponent>,
+                private router: Router,
     ) {
     }
 
@@ -47,6 +49,7 @@ export class SignUpComponent implements OnInit {
             await this.currentUserSubject.next({provider: user.provider, token: user.authToken});
             this.toastrService.showToast('Welcome ' + user.name, '');
             this.ref.close();
+            await this.router.navigateByUrl('pages/dashboard');
         });
     }
 
@@ -56,6 +59,7 @@ export class SignUpComponent implements OnInit {
             await this.currentUserSubject.next({provider: user.provider, token: user.idToken});
             this.toastrService.showToast('Welcome ' + user.name, '');
             this.ref.close();
+            await this.router.navigateByUrl('pages/dashboard');
         });
     }
 

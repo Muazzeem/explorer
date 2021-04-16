@@ -1,16 +1,6 @@
 <nb-tag-list (tagRemove)="onTagRemove($event)">
-    <nb-tag *ngFor="let stack of stacks" [text]="stack"
-            appearance="filled" status="primary" removable></nb-tag>
-    <input #autoInput
-           (input)="onChange()" (tagAdd)="onTagAdd($event)"
-           [nbAutocomplete]="auto"
-           fullWidth
-           nbInput nbTagInput placeholder="Enter your favourite stacks..." type="text">
-    <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
-        <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option">
-            {{ option }}
-        </nb-option>
-    </nb-autocomplete>
+    <nb-tag *ngFor="let tree of trees" [text]="tree" removable></nb-tag>
+    <input type="text" nbTagInput (tagAdd)="onTagAdd($event)" fullWidth>
 </nb-tag-list>
 <button (click)="submit()" type="submit" class="float-right mt-3" nbButton status="primary">
     <nb-icon icon="checkmark-circle-outline"></nb-icon>
