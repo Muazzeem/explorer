@@ -1,9 +1,6 @@
 import {Component, OnInit, ChangeDetectionStrategy, ViewChild} from '@angular/core';
-import {NbTagComponent, NbTagInputAddEvent} from '@nebular/theme';
+import {NbTagComponent} from '@nebular/theme';
 import {Observable, of} from 'rxjs';
-import {map} from 'rxjs/operators';
-import {ApiService} from '../../@core/mock/api.service';
-import {UserService} from '../../@core/mock/users.service';
 import {StacksService} from '../../@core/mock/stacks.service';
 
 @Component({
@@ -25,6 +22,8 @@ export class StacksUpdateComponent implements OnInit {
 
 
     ngOnInit(): void {
+        this.options = ['Option 1', 'Option 2', 'Option 3'];
+        this.filteredOptions$ = of(this.options);
     }
 
     submit() {
@@ -37,5 +36,13 @@ export class StacksUpdateComponent implements OnInit {
 
     onTagAdd({value, input}): void {
         this.trees = this.stackService.onTagAdd({value, input});
+    }
+
+    onChange() {
+        this.stackService.onChange();
+    }
+
+    onSelectionChange($event) {
+        this.stackService.onSelectionChange($event);
     }
 }

@@ -16,8 +16,6 @@ import {LayoutComponent} from './layout.component';
 import {InfiniteListComponent} from './infinite-list/infinite-list.component';
 import {CompaniesService, RecommendCompanyService} from '../../@core/mock/companies.service';
 import {RecommendCompaniesComponent} from './recommend-companies/recommend-companies.component';
-import {RatingModule} from 'ng-starrating';
-import {NgbRatingModule} from '@ng-bootstrap/ng-bootstrap';
 import {NewsPostComponent} from './infinite-list/news-post/news-post.component';
 import {StacksService} from '../../@core/mock/stacks.service';
 
@@ -45,8 +43,6 @@ import {StacksService} from '../../@core/mock/stacks.service';
         NbActionsModule,
         NbProgressBarModule,
         NbBadgeModule,
-        RatingModule,
-        NgbRatingModule,
         NbAlertModule,
     ],
     declarations: [

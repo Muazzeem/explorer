@@ -55,7 +55,7 @@ export class RecommendCompaniesComponent implements OnInit {
     showToast(position, status) {
         this.index += 1;
         this.toastrService.show(
-            status || 'Success',
+            '' || '',
             `${this.error}`,
             {position, status});
     }

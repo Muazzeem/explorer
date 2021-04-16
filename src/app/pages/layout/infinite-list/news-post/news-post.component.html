@@ -10,12 +10,6 @@
         <span *ngIf="!showMore">...</span>
         <a href="javascript:" *ngIf="!showMore" (click)="showMore=true">See More</a>
     </p>
-    <ngb-rating [max]="5" style="font-size: 30px; color: #ffcc00" [formControl]="ctrl"></ngb-rating>
-    <div class="form-text small">
-        <p *ngIf="ctrl.valid">Rate: <b>{{ctrl.value}}</b></p>
-        <div *ngIf="ctrl.valid" class="text-success">Thanks!</div>
-        <div *ngIf="ctrl.invalid" class="text-danger">Please rate us</div>
-    </div>
 </ng-template>
 
 <a style="cursor: pointer" (click)="openWindow()">

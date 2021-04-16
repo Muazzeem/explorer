@@ -24,7 +24,6 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {AddCompanyComponent} from './add-company/add-company.component';
 import {CvUploaderComponent} from './cv-uploader/cv-uploader.component';
 import {FilePickerModule} from 'ngx-awesome-uploader';
-import {RatingModule} from 'ng-starrating';
 import {PolicyComponent} from './policy/policy.component';
 
 @NgModule({
@@ -48,7 +47,6 @@ import {PolicyComponent} from './policy/policy.component';
         NbPopoverModule,
         NbIconModule,
         FilePickerModule,
-        RatingModule,
     ],
     declarations: [
         PagesComponent,
