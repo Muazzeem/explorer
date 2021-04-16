@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 import { LayoutComponent } from './layout.component';
 import { InfiniteListComponent } from './infinite-list/infinite-list.component';
 import {RecommendCompaniesComponent} from './recommend-companies/recommend-companies.component';
-
 
 const routes: Routes = [{
   path: '',

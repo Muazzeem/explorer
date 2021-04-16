@@ -10,7 +10,6 @@ import {NbDialogRef} from '@nebular/theme';
 import {LogoutdialogDialogComponent} from '../modal-overlays/dialog/log-out-dialog/log-out-dialog.component';
 import {Router} from '@angular/router';
 
-
 @Component({
     selector: 'ngx-sign-up',
     templateUrl: './sign-up.component.html',
@@ -20,7 +19,6 @@ export class SignUpComponent implements OnInit {
     loginURL = `/api/user/get-token`;
     private currentUserSubject = new BehaviorSubject<any>({} as any);
     public currentUser = this.currentUserSubject.asObservable().pipe(distinctUntilChanged());
-
     constructor(private userService: UserService,
                 private apiService: ApiService,
                 private authService: SocialAuthService,
@@ -29,7 +27,6 @@ export class SignUpComponent implements OnInit {
                 private router: Router,
     ) {
     }
-
     ngOnInit(): void {
         this.currentUserSubject.subscribe(data => {
             this.apiService.post(this.loginURL, data).subscribe(
@@ -42,8 +39,6 @@ export class SignUpComponent implements OnInit {
             );
         });
     }
-
-    // tslint:disable-next-line:typedef
     signInWithFB() {
         this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(async user => {
             await this.currentUserSubject.next({provider: user.provider, token: user.authToken});
@@ -52,8 +47,6 @@ export class SignUpComponent implements OnInit {
             await this.router.navigateByUrl('pages/dashboard');
         });
     }
-
-    // tslint:disable-next-line:typedef
     signInWithGoogle() {
         this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(async user => {
             await this.currentUserSubject.next({provider: user.provider, token: user.idToken});
@@ -62,6 +55,4 @@ export class SignUpComponent implements OnInit {
             await this.router.navigateByUrl('pages/dashboard');
         });
     }
-
-
 }

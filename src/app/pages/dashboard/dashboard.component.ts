@@ -19,12 +19,10 @@ export class DashboardComponent implements OnInit {
         [55, 25, 20],
     ];
     doughnutChartType: ChartType = 'doughnut';
-
     constructor(private toastrService: ToastrService,
                 private apiService: ApiService,
     ) {
     }
-
     data = [
         {name: 'Binate Solutions Ltd.', web: 'https://www.binate-solutions.com'},
         {name: 'CodersTrust Bangladesh Ltd.', web: 'https://coderstrustbd.com/'},
@@ -46,11 +44,9 @@ export class DashboardComponent implements OnInit {
         {name: 'ruby'},
         {name: 'go'},
     ];
-
     ngOnInit(): void {
         this.count_total_company();
     }
-
     count_total_company() {
         this.apiService.get(this.totalCompanyURL).subscribe((data: any) => {
             this.total = data;

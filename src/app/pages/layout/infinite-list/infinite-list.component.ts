@@ -4,6 +4,7 @@ import {ApiService} from '../../../@core/mock/api.service';
 import {CompaniesService} from '../../../@core/mock/companies.service';
 import {NbTagComponent} from '@nebular/theme';
 import {StacksService} from '../../../@core/mock/stacks.service';
+import {map} from 'rxjs/operators';
 
 @Component({
     selector: 'ngx-infinite-list',
@@ -64,11 +65,22 @@ export class InfiniteListComponent implements OnInit {
         this.trees = this.stackService.onTagAdd({value, input});
     }
 
+    private filter(value: string): string[] {
+        const filterValue = value.toLowerCase();
+        return this.options.filter(optionValue => optionValue.toLowerCase().includes(filterValue));
+    }
+
+    getFilteredOptions(value: string): Observable<string[]> {
+        return of(value).pipe(
+            map(filterString => this.filter(filterString)),
+        );
+    }
+
     onChange() {
-        this.stackService.onChange();
+        this.filteredOptions$ = this.getFilteredOptions(this.input.nativeElement.value);
     }
 
     onSelectionChange($event) {
-        this.stackService.onSelectionChange($event);
+        this.filteredOptions$ = this.getFilteredOptions($event);
     }
 }

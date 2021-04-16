@@ -18,16 +18,12 @@ export class NewsPostComponent implements OnInit {
     showbusiness = false;
     businessText: any[];
     ctrl = new FormControl(null, Validators.required);
-
     constructor(private windowService: NbWindowService) {
     }
-
     @ViewChild('contentTemplate') contentTemplate: TemplateRef<any>;
     @Input() post: NewsPost;
     starRating: any;
     currentRate: 5;
-
-
     openWindow() {
         this.windowService.open(
             this.contentTemplate,

@@ -15,39 +15,30 @@ export class CvUploaderComponent implements OnInit {
     public successMessage: string;
     @ViewChild('uploader', {static: true}) uploader: FilePickerComponent;
     public myFiles: FilePreviewModel[] = [];
-
     constructor(public http: HttpClient) {
     }
-
     ngOnInit(): void {
         this.errorMessage = '';
         this.successMessage = '';
     }
-
     public onValidationError(er: ValidationError): void {
         console.warn('validationError', er);
         console.warn('Error', 'File Validation');
         this.errorMessage = er.error;
     }
-
     public onUploadSuccess(res: FilePreviewModel): void {
         console.warn('File upload successful', res.fileName);
     }
-
     public onUploadFail(er: HttpErrorResponse): void {
         console.warn('Fail', 'Try Again');
     }
-
     public onRemoveSuccess(res: FilePreviewModel): void {
     }
-
     public onFileAdded(file: FilePreviewModel): void {
         this.myFiles.push(file);
     }
-
     public onFileRemoved(file: FilePreviewModel): void {
     }
-
     public removeFile(): void {
         this.uploader.removeFileFromList(this.myFiles[0]);
     }

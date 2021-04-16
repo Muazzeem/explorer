@@ -10,11 +10,8 @@ import {
     providedIn: 'root',
 })
 export class ToastrService {
-
     constructor(private toastrService: NbToastrService) {
     }
-
-
     config: NbToastrConfig;
     duration = 2000;
     position: NbGlobalPosition = NbGlobalPhysicalPosition.TOP_RIGHT;

@@ -3,6 +3,7 @@ import {NbTagComponent} from '@nebular/theme';
 import {Observable, of} from 'rxjs';
 import {StacksService} from '../../@core/mock/stacks.service';
 import {ApiService} from '../../@core/mock/api.service';
+import {map} from "rxjs/operators";
 
 @Component({
     selector: 'ngx-stacks-update',
@@ -16,38 +17,40 @@ export class StacksUpdateComponent implements OnInit {
     filteredOptions$: Observable<string[]>;
     stackList = '/api/valid-tags';
     @ViewChild('autoInput') input;
-    trees: any;
+    userStacks: any;
 
     constructor(private stackService: StacksService,
                 private apiService: ApiService,
     ) {
     }
-
-
     ngOnInit(): void {
         this.apiService.get(this.stackList).subscribe((data: any) => {
             this.options = data.stacks;
             this.filteredOptions$ = of(this.options);
         });
     }
-
     submit() {
-        console.warn(this.trees);
+        console.warn(this.userStacks);
     }
-
     onTagRemove(tagToRemove: NbTagComponent): void {
-        this.trees.delete(tagToRemove.text);
+        this.userStacks.delete(tagToRemove.text);
     }
-
     onTagAdd({value, input}): void {
-        this.trees = this.stackService.onTagAdd({value, input});
+        this.userStacks = this.stackService.onTagAdd({value, input});
     }
-
+    private filter(value: string): string[] {
+        const filterValue = value.toLowerCase();
+        return this.options.filter(optionValue => optionValue.toLowerCase().includes(filterValue));
+    }
+    getFilteredOptions(value: string): Observable<string[]> {
+        return of(value).pipe(
+            map(filterString => this.filter(filterString)),
+        );
+    }
     onChange() {
-        this.stackService.onChange();
+        this.filteredOptions$ = this.getFilteredOptions(this.input.nativeElement.value);
     }
-
     onSelectionChange($event) {
-        this.stackService.onSelectionChange($event);
+        this.filteredOptions$ = this.getFilteredOptions($event);
     }
 }

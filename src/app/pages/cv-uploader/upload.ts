@@ -15,7 +15,6 @@ export class DemoFilePickerAdapter extends FilePickerAdapter {
     const req = new HttpRequest('POST', api, form, {
       reportProgress: true,
      });
-
     return this.http.request(req)
     .pipe(
       map((res: HttpEvent<any>) => {

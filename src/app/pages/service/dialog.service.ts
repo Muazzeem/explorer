@@ -7,14 +7,11 @@ import {LogoutdialogDialogComponent} from '../modal-overlays/dialog/log-out-dial
     providedIn: 'root',
 })
 export class DialogService {
-
     constructor(private dialogService: NbDialogService) {
     }
-
     open() {
         this.dialogService.open(ShowcaseDialogComponent);
     }
-
     logOut() {
         this.dialogService.open(LogoutdialogDialogComponent);
     }

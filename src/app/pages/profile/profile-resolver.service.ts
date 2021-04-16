@@ -12,7 +12,6 @@ export class ProfileResolver implements Resolve<Profile> {
         private router: Router,
     ) {
     }
-
     resolve(
         route: ActivatedRouteSnapshot,
         state: RouterStateSnapshot,

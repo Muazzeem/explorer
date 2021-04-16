@@ -7,14 +7,11 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
     styleUrls: ['./add-company.component.scss'],
 })
 export class AddCompanyComponent implements OnInit {
-
     firstForm: FormGroup;
     secondForm: FormGroup;
     thirdForm: FormGroup;
-
     constructor(private fb: FormBuilder) {
     }
-
     ngOnInit() {
     }
 }

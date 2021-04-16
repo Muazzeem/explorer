@@ -1,13 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {RecommendCompanyService} from '../../../@core/mock/companies.service';
 import {NbToastrService} from '@nebular/theme';
-
 @Component({
     selector: 'ngx-infinite-list',
     templateUrl: 'recommend-companies.component.html',
     styleUrls: ['recommend-companies.component.scss'],
 })
-
 export class RecommendCompaniesComponent implements OnInit {
     firstCard = {
         news: [],
@@ -19,17 +17,14 @@ export class RecommendCompaniesComponent implements OnInit {
     loading = true;
     error: any;
     private index: number = 0;
-
     constructor(private newsService: RecommendCompanyService,
                 private toastrService: NbToastrService,
     ) {
     }
-
     loadNext(cardData) {
         if (cardData.loading) {
             return;
         }
-
         cardData.loading = true;
         cardData.placeholders = new Array(this.pageSize);
         this.loading = true;
@@ -47,11 +42,9 @@ export class RecommendCompaniesComponent implements OnInit {
                 },
             );
     }
-
     ngOnInit(): void {
         this.loading = false;
     }
-
     showToast(position, status) {
         this.index += 1;
         this.toastrService.show(

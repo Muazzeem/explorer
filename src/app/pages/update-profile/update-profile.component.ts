@@ -15,7 +15,6 @@ export class UpdateProfileComponent implements OnInit {
     isSubmitting = false;
     errors: Object = {};
     settingsForm: FormGroup;
-
     constructor(private fb: FormBuilder,
                 private userService: UserService,
                 private router: Router,
@@ -27,12 +26,10 @@ export class UpdateProfileComponent implements OnInit {
             address: '',
         });
     }
-
     ngOnInit() {
         Object.assign(this.user, this.userService.getCurrentUser());
         this.settingsForm.patchValue(this.user);
     }
-
     submitForm() {
         this.isSubmitting = true;
         this.updateUser(this.settingsForm.value);
@@ -48,7 +45,6 @@ export class UpdateProfileComponent implements OnInit {
             );
         this.toastrService.showToast('We are update your profile', '');
     }
-
     updateUser(values: Object) {
         Object.assign(this.user, values);
     }

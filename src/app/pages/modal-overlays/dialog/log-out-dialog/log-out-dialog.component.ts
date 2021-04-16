@@ -9,19 +9,15 @@ import {UserService} from '../../../../@core/mock/users.service';
     styleUrls: ['log-out-dialog.component.scss'],
 })
 export class LogoutdialogDialogComponent {
-
     @Input() title: string;
-
     constructor(protected ref: NbDialogRef<LogoutdialogDialogComponent>,
                 private userService: UserService,
                 private route: Router,
     ) {
     }
-
     dismiss() {
         this.ref.close();
     }
-
     logout() {
         this.userService.purgeAuth();
         this.route.navigateByUrl('/');
