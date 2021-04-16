@@ -2,6 +2,7 @@ import {Injectable, OnInit, ViewChild} from '@angular/core';
 import {NbTagInputAddEvent} from '@nebular/theme';
 import {Observable, of} from 'rxjs';
 import {map} from 'rxjs/operators';
+import {ApiService} from './api.service';
 
 @Injectable({
     providedIn: 'root',
@@ -9,10 +10,11 @@ import {map} from 'rxjs/operators';
 export class StacksService implements OnInit {
     options: string[];
     filteredOptions$: Observable<string[]>;
-
+    stackList = '/api/valid-tags';
     @ViewChild('autoInput') input;
+    stacksList: [];
 
-    constructor() {
+    constructor(private apiService: ApiService) {
     }
 
     trees: Set<string> = new Set();
@@ -23,11 +25,6 @@ export class StacksService implements OnInit {
         }
         input.nativeElement.value = '';
         return this.trees;
-    }
-
-    ngOnInit() {
-        this.options = ['Option 1', 'Option 2', 'Option 3'];
-        this.filteredOptions$ = of(this.options);
     }
 
     private filter(value: string): string[] {
@@ -47,5 +44,8 @@ export class StacksService implements OnInit {
 
     onSelectionChange($event) {
         this.filteredOptions$ = this.getFilteredOptions($event);
+    }
+
+    ngOnInit(): void {
     }
 }

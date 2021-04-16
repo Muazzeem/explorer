@@ -2,7 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {Observable, of} from 'rxjs';
 import {ApiService} from '../../../@core/mock/api.service';
 import {CompaniesService} from '../../../@core/mock/companies.service';
-import {NbTagComponent, NbTagInputAddEvent} from '@nebular/theme';
+import {NbTagComponent} from '@nebular/theme';
 import {StacksService} from '../../../@core/mock/stacks.service';
 
 @Component({
@@ -50,6 +50,10 @@ export class InfiniteListComponent implements OnInit {
 
     ngOnInit(): void {
         this.loading = false;
+        this.apiService.get(this.stackList).subscribe((data: any) => {
+            this.options = data.stacks;
+            this.filteredOptions$ = of(this.options);
+        });
     }
 
     onTagRemove(tagToRemove: NbTagComponent): void {
@@ -60,4 +64,11 @@ export class InfiniteListComponent implements OnInit {
         this.trees = this.stackService.onTagAdd({value, input});
     }
 
+    onChange() {
+        this.stackService.onChange();
+    }
+
+    onSelectionChange($event) {
+        this.stackService.onSelectionChange($event);
+    }
 }

@@ -2,6 +2,7 @@ import {Component, OnInit, ChangeDetectionStrategy, ViewChild} from '@angular/co
 import {NbTagComponent} from '@nebular/theme';
 import {Observable, of} from 'rxjs';
 import {StacksService} from '../../@core/mock/stacks.service';
+import {ApiService} from '../../@core/mock/api.service';
 
 @Component({
     selector: 'ngx-stacks-update',
@@ -17,13 +18,17 @@ export class StacksUpdateComponent implements OnInit {
     @ViewChild('autoInput') input;
     trees: any;
 
-    constructor(private stackService: StacksService) {
+    constructor(private stackService: StacksService,
+                private apiService: ApiService,
+    ) {
     }
 
 
     ngOnInit(): void {
-        this.options = ['Option 1', 'Option 2', 'Option 3'];
-        this.filteredOptions$ = of(this.options);
+        this.apiService.get(this.stackList).subscribe((data: any) => {
+            this.options = data.stacks;
+            this.filteredOptions$ = of(this.options);
+        });
     }
 
     submit() {
