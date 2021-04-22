@@ -17,11 +17,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         children: [
             {
                 title: 'Companies List',
-                link: '/pages/layout/infinite-list',
+                link: '/pages/layout/companies-list',
             },
             {
                 title: 'Recommend Companies',
-                link: '/pages/layout/recommend',
+                link: '/pages/layout/recommend-companies',
             },
         ],
     },

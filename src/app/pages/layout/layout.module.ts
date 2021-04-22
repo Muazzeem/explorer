@@ -3,7 +3,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
     NbAccordionModule, NbActionsModule, NbAlertModule, NbAutocompleteModule, NbBadgeModule,
     NbButtonModule,
-    NbCardModule, NbInputModule,
+    NbCardModule, NbIconModule, NbInputModule,
     NbListModule, NbPopoverModule, NbProgressBarModule, NbRadioModule,
     NbRouteTabsetModule, NbSelectModule, NbSpinnerModule,
     NbStepperModule,
@@ -13,11 +13,12 @@ import {
 import {ThemeModule} from '../../@theme/theme.module';
 import {LayoutRoutingModule} from './layout-routing.module';
 import {LayoutComponent} from './layout.component';
-import {InfiniteListComponent} from './infinite-list/infinite-list.component';
+import {CompaniesListComponent} from './companies-list/companies-list.component';
 import {CompaniesService, RecommendCompanyService} from '../../@core/mock/companies.service';
 import {RecommendCompaniesComponent} from './recommend-companies/recommend-companies.component';
-import {NewsPostComponent} from './infinite-list/news-post/news-post.component';
+import {CompaniesComponent} from './companies-list/companies/companies.component';
 import {StacksService} from '../../@core/mock/stacks.service';
+
 
 @NgModule({
     imports: [
@@ -44,11 +45,12 @@ import {StacksService} from '../../@core/mock/stacks.service';
         NbProgressBarModule,
         NbBadgeModule,
         NbAlertModule,
+        NbIconModule,
     ],
     declarations: [
         LayoutComponent,
-        InfiniteListComponent,
-        NewsPostComponent,
+        CompaniesListComponent,
+        CompaniesComponent,
         RecommendCompaniesComponent,
     ],
     providers: [

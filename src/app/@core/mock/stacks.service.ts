@@ -2,7 +2,6 @@ import {Injectable, OnInit, ViewChild} from '@angular/core';
 import {NbTagInputAddEvent} from '@nebular/theme';
 import {Observable, of} from 'rxjs';
 import {map} from 'rxjs/operators';
-import {ApiService} from './api.service';
 
 @Injectable({
     providedIn: 'root',
@@ -12,9 +11,7 @@ export class StacksService implements OnInit {
     filteredOptions$: Observable<string[]>;
     stackList = '/api/valid-tags';
     @ViewChild('autoInput') input;
-    stacksList: [];
-
-    constructor(private apiService: ApiService) {
+    constructor() {
     }
 
     trees: Set<string> = new Set();

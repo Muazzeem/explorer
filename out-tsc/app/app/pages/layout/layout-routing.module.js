@@ -9,7 +9,7 @@ const routes = [{
         component: LayoutComponent,
         children: [
             {
-                path: 'infinite-list',
+                path: 'companies-list',
                 component: InfiniteListComponent,
             },
             {

@@ -3,7 +3,7 @@
                                                                        href="{{post['web']}}">{{post['web']}}</a></p>
     <p><b>Positions: </b>
         <nb-tag class="ml-1 mt-1" *ngFor="let temp2 of post['positions']"
-                status="primary" appearance="outline" text="{{temp2}}"></nb-tag>
+                status="basic" appearance="filled" text="{{temp2}}"></nb-tag>
     </p>
     <p *ngIf="!showbusiness"><b>Business: </b>
         {{(showMore) ? businessText : businessText | slice:0:200}}
@@ -17,7 +17,7 @@
         <h6>{{post['name']}}</h6>
         <p>{{post['address']}}</p>
         <nb-tag class="ml-1 mt-1" *ngFor="let temp2 of post['stacks']"
-                status="info" appearance="outline" text="{{temp2}}"></nb-tag>
+                status="basic" appearance="filled" text="{{temp2}}"></nb-tag>
     </article>
 </a>
 

@@ -1,10 +1,15 @@
 <nb-tag-list (tagRemove)="onTagRemove($event)">
-    <nb-tag *ngFor="let stacks of userStacks" [text]="stacks" removable></nb-tag>
+    <nb-tag status="primary" appearance="filled"
+            *ngFor="let stacks of userStacks" [text]="stacks" removable></nb-tag>
     <input type="text"
            nbTagInput (tagAdd)="onTagAdd($event)"
            #autoInput
            (input)="onChange()"
            [nbAutocomplete]="auto"
+           placeholder="Enter your favourite stacks..."
+           fieldSize="large"
+           status="info"
+           shape="semi-round"
            fullWidth>
     <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
 

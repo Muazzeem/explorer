@@ -15,7 +15,7 @@ export const MENU_ITEMS = [
         children: [
             {
                 title: 'Companies List',
-                link: '/pages/layout/infinite-list',
+                link: '/pages/layout/companies-list',
             },
             {
                 title: 'Recommend Companies',

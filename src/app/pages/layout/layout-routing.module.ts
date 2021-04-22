@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout.component';
-import { InfiniteListComponent } from './infinite-list/infinite-list.component';
+import { CompaniesListComponent } from './companies-list/companies-list.component';
 import {RecommendCompaniesComponent} from './recommend-companies/recommend-companies.component';
 
 const routes: Routes = [{
@@ -9,11 +9,11 @@ const routes: Routes = [{
   component: LayoutComponent,
   children: [
     {
-      path: 'infinite-list',
-      component: InfiniteListComponent,
+      path: 'companies-list',
+      component: CompaniesListComponent,
     },
       {
-      path: 'recommend',
+      path: 'recommend-companies',
       component: RecommendCompaniesComponent,
     },
   ],

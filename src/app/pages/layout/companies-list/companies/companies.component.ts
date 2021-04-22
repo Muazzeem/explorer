@@ -5,7 +5,7 @@ import {FormControl, Validators} from '@angular/forms';
 
 @Component({
     selector: 'ngx-news-post',
-    templateUrl: 'news-post.component.html',
+    templateUrl: 'companies.component.html',
     styles: [`
         :host {
             display: block;
@@ -13,17 +13,20 @@ import {FormControl, Validators} from '@angular/forms';
         }
     `],
 })
-export class NewsPostComponent implements OnInit {
+export class CompaniesComponent implements OnInit {
     showMore = false;
     showbusiness = false;
     businessText: any[];
     ctrl = new FormControl(null, Validators.required);
+
     constructor(private windowService: NbWindowService) {
     }
+
     @ViewChild('contentTemplate') contentTemplate: TemplateRef<any>;
     @Input() post: NewsPost;
     starRating: any;
     currentRate: 5;
+
     openWindow() {
         this.windowService.open(
             this.contentTemplate,
@@ -37,6 +40,8 @@ export class NewsPostComponent implements OnInit {
             this.showMore = true;
         }
     }
+
     ngOnInit(): void {
+        console.warn(this.post);
     }
 }

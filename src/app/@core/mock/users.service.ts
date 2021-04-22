@@ -11,6 +11,7 @@ export class UserService extends UserData {
     getUsers(): Observable<User[]> {
         throw new Error('Method not implemented.');
     }
+
     stacksUrl = `/api/user/stacks`;
     userUrl = `/api/user/user-info`;
     info = [];
@@ -23,12 +24,14 @@ export class UserService extends UserData {
     constructor(private apiService: ApiService, private jwtService: JwtService) {
         super();
     }
+
     getStacks(): Observable<any> {
         return this.apiService.get(this.stacksUrl);
     }
 
     updateStacks(stacks): Observable<any> {
-        return this.apiService.put(this.stacksUrl, stacks);
+        return this.apiService
+            .post(this.stacksUrl, stacks);
     }
 
     getProfile(): Observable<any> {

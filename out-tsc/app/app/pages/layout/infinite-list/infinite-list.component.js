@@ -72,11 +72,11 @@ __decorate([
 ], InfiniteListComponent.prototype, "input", void 0);
 InfiniteListComponent = __decorate([
     Component({
-        selector: 'ngx-infinite-list',
-        templateUrl: 'infinite-list.component.html',
-        styleUrls: ['infinite-list.component.scss'],
+        selector: 'ngx-companies-list',
+        templateUrl: 'companies-list.component.html',
+        styleUrls: ['companies-list.component.scss'],
     }),
     __metadata("design:paramtypes", [ApiService, NewsService])
 ], InfiniteListComponent);
 export { InfiniteListComponent };
-//# sourceMappingURL=infinite-list.component.js.map
+//# sourceMappingURL=companies-list.component.js.map

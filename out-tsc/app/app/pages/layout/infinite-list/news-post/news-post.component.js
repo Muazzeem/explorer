@@ -32,8 +32,8 @@ __decorate([
 ], NewsPostComponent.prototype, "post", void 0);
 NewsPostComponent = __decorate([
     Component({
-        selector: 'ngx-news-post',
-        templateUrl: 'news-post.component.html',
+        selector: 'ngx-companies',
+        templateUrl: 'companies.component.html',
         styles: [`
         :host {
             display: block;
@@ -44,4 +44,4 @@ NewsPostComponent = __decorate([
     __metadata("design:paramtypes", [NbWindowService])
 ], NewsPostComponent);
 export { NewsPostComponent };
-//# sourceMappingURL=news-post.component.js.map
+//# sourceMappingURL=companies.component.js.map

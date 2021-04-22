@@ -8,10 +8,10 @@ import {map} from 'rxjs/operators';
 
 @Component({
     selector: 'ngx-infinite-list',
-    templateUrl: 'infinite-list.component.html',
-    styleUrls: ['infinite-list.component.scss'],
+    templateUrl: 'companies-list.component.html',
+    styleUrls: ['companies-list.component.scss'],
 })
-export class InfiniteListComponent implements OnInit {
+export class CompaniesListComponent implements OnInit {
     firstCard = {
         news: [],
         placeholders: [],
@@ -23,7 +23,7 @@ export class InfiniteListComponent implements OnInit {
     stackList = '/api/valid-tags';
     filteredOptions$: Observable<string[]>;
     @ViewChild('autoInput') input;
-    trees: any;
+    trees: Set<string> = new Set();
 
     constructor(private apiService: ApiService,
                 private newsService: CompaniesService,

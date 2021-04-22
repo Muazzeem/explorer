@@ -29,7 +29,7 @@ let RecommendCompaniesComponent = class RecommendCompaniesComponent {
 };
 RecommendCompaniesComponent = __decorate([
     Component({
-        selector: 'ngx-infinite-list',
+        selector: 'ngx-companies-list',
         templateUrl: 'recommend-companies.component.html',
         styleUrls: ['recommend-companies.component.scss'],
     }),

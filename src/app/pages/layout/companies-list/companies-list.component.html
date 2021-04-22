@@ -1,7 +1,7 @@
 <div class="infinite-cards row">
     <div class="col-md-12 col-lg-12 col-xxxl-12">
         <nb-card accent="info" [nbSpinner]="loading" nbSpinnerStatus="danger" class="own-scroll">
-            <nb-card-header>Companies</nb-card-header>
+            <nb-card-header><b>Companies List</b></nb-card-header>
             <nb-tag-list (tagRemove)="onTagRemove($event)">
                 <nb-tag *ngFor="let tree of trees" [text]="tree" removable></nb-tag>
                 <input type="text"
@@ -9,7 +9,10 @@
                        #autoInput
                        (input)="onChange()"
                        [nbAutocomplete]="auto"
-                       placeholder="Enter value"
+                       placeholder="Search by stacks like (Python, TypeScript, Django, Angular)"
+                       fieldSize="large"
+                       status="info"
+                       shape="semi-round"
                        fullWidth>
                 <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">
 

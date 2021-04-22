@@ -2,13 +2,6 @@
   "name": "ngx-admin",
   "version": "7.0.0",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/akveo/ngx-admin.git"
-  },
-  "bugs": {
-    "url": "https://github.com/akveo/ngx-admin/issues"
-  },
   "scripts": {
     "ng": "ng",
     "conventional-changelog": "conventional-changelog",
@@ -29,7 +22,8 @@
     "release:changelog": "npm run conventional-changelog -- -p angular -i CHANGELOG.md -s",
     "postinstall": "ngcc --properties es2015 es5 browser module main --first-only --create-ivy-entry-points --tsconfig \"./src/tsconfig.app.json\"",
     "aws-deploy": "aws s3 sync dist/ s3://demo.explorer.fractalslab.com",
-    "deploy": "ng build --prod --build-optimizer=true && npm run aws-deploy"
+    "deploy": "ng build --prod --build-optimizer=true --aot && npm run aws-deploy",
+    "cache-clear-prod": "aws cloudfront create-invalidation --distribution-id=E21PKOFO4AV38T --paths /"
   },
   "dependencies": {
     "@akveo/ng2-completer": "^9.0.1",
