@@ -18,7 +18,6 @@ import {NbEvaIconsModule} from '@nebular/eva-icons';
 import {
     FooterComponent,
     HeaderComponent,
-    SearchInputComponent,
     TinyMCEComponent,
 } from './components';
 import {
@@ -55,7 +54,6 @@ const NB_MODULES = [
 const COMPONENTS = [
     HeaderComponent,
     FooterComponent,
-    SearchInputComponent,
     TinyMCEComponent,
     OneColumnLayoutComponent,
     ThreeColumnsLayoutComponent,
@@ -81,7 +79,7 @@ export class ThemeModule {
             providers: [
                 ...NbThemeModule.forRoot(
                     {
-                        name: 'default',
+                        name: 'corporate',
                     },
                     [DEFAULT_THEME, COSMIC_THEME, CORPORATE_THEME, DARK_THEME],
                 ).providers,

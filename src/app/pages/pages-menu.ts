@@ -17,11 +17,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         children: [
             {
                 title: 'Companies List',
-                link: '/pages/layout/companies-list',
+                link: '/pages/company/companies-list',
             },
             {
                 title: 'Recommend Companies',
-                link: '/pages/layout/recommend-companies',
+                link: '/pages/company/recommend-companies',
             },
         ],
     },
@@ -34,5 +34,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Privacy Policy',
         icon: {icon: 'checkmark-outline', pack: 'eva'},
         link: '/pages/policy',
+    },
+    {
+        title: 'Feedback',
+        icon: {icon: 'heart-outline', pack: 'eva'},
+        link: '/pages/forms/feedback',
     },
 ];

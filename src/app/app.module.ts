@@ -25,7 +25,7 @@ import {
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {environment} from '../environments/environment';
 import {HttpTokenInterceptor} from './pages/interceptors';
-import {AppShowAuthedDirective} from './pages/app-show-authed.directive';
+import {AppShowAuthedDirective} from './@core/mock/app-show-authed.directive';
 
 
 @NgModule({
@@ -73,7 +73,7 @@ import {AppShowAuthedDirective} from './pages/app-show-authed.directive';
             } as SocialAuthServiceConfig,
         },
     ],
-    exports: [],
+    exports: [AppShowAuthedDirective],
 })
 export class AppModule {
 }

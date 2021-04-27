@@ -1,12 +1,5 @@
-import {
-    Directive,
-    Input,
-    OnInit,
-    TemplateRef,
-    ViewContainerRef,
-} from '@angular/core';
-import {UserService} from '../@core/mock/users.service';
-
+import {Directive, Input, OnInit, TemplateRef, ViewContainerRef} from '@angular/core';
+import {UserService} from './users.service';
 
 @Directive({
     selector: '[ngxAppShowAuthed]',
@@ -18,6 +11,7 @@ export class AppShowAuthedDirective implements OnInit {
         private viewContainer: ViewContainerRef,
     ) {
     }
+
     condition: boolean;
 
     ngOnInit() {
@@ -31,6 +25,7 @@ export class AppShowAuthedDirective implements OnInit {
             },
         );
     }
+
     @Input() set appShowAuthed(condition: boolean) {
         this.condition = condition;
     }

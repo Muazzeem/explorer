@@ -39,7 +39,7 @@ const routes: Routes = [{
             component: PolicyComponent,
         },
         {
-            path: 'layout',
+            path: 'company',
             loadChildren: () => import('./layout/layout.module')
                 .then(m => m.LayoutModule),
         },

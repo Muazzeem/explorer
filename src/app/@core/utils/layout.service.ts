@@ -17,10 +17,4 @@ export class LayoutService {
   onChangeLayoutSize(): Observable<any> {
     return this.layoutSizeChange$.pipe(delay(1));
   }
-
-  onSafeChangeLayoutSize(): Observable<any> {
-    return this.layoutSizeChange$.pipe(
-      debounceTime(350),
-    );
-  }
 }

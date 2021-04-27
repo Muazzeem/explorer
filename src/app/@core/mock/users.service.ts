@@ -1,17 +1,14 @@
 import {BehaviorSubject, Observable, ReplaySubject} from 'rxjs';
 import {Injectable} from '@angular/core';
-import {Contacts, RecentUsers, User, UserData} from '../data/users';
+
+
 import {distinctUntilChanged, map} from 'rxjs/operators';
 import {ApiService} from './api.service';
 import {JwtService} from './jwt.service';
 
 
 @Injectable()
-export class UserService extends UserData {
-    getUsers(): Observable<User[]> {
-        throw new Error('Method not implemented.');
-    }
-
+export class UserService {
     stacksUrl = `/api/user/stacks`;
     userUrl = `/api/user/user-info`;
     info = [];
@@ -22,7 +19,6 @@ export class UserService extends UserData {
     public isAuthenticated = this.isAuthenticatedSubject.asObservable();
 
     constructor(private apiService: ApiService, private jwtService: JwtService) {
-        super();
     }
 
     getStacks(): Observable<any> {
@@ -82,14 +78,5 @@ export class UserService extends UserData {
                 this.currentUserSubject.next(data);
                 return data;
             }));
-    }
-
-    getContacts(): Observable<Contacts[]> {
-        return undefined;
-    }
-
-    // @ts-ignore
-    getRecentUsers(): Observable<RecentUsers[]> {
-        return undefined;
     }
 }
