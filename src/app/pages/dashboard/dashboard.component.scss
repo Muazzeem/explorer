@@ -14,9 +14,14 @@
     }
   }
 }
-nb-tag {
-  height: 50px;
-  width: 200px;
+
+.stacks_name {
   justify-content: center;
   text-align: center;
+}
+
+@media only screen and (max-width: 430px) {
+  .stacks_card {
+    display: none;
+  }
 }
