@@ -12,31 +12,8 @@ import {Router} from '@angular/router';
     templateUrl: './header.component.html',
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-
-    private destroy$: Subject<void> = new Subject<void>();
     userPictureOnly: boolean = false;
     user: any;
-
-    themes = [
-        {
-            value: 'default',
-            name: 'Light',
-        },
-        {
-            value: 'dark',
-            name: 'Dark',
-        },
-        {
-            value: 'cosmic',
-            name: 'Cosmic',
-        },
-        {
-            value: 'corporate',
-            name: 'Corporate',
-        },
-    ];
-
-    currentTheme = 'default';
 
     userMenu = [
         {
@@ -66,7 +43,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit(): void {
-        this.currentTheme = this.themeService.currentTheme;
         this.userService.currentUser.subscribe(user => {
             this.user = user;
         });
