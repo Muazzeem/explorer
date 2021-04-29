@@ -6,3 +6,11 @@
     max-height: 500px;
   }
 }
+
+@media only screen and (max-width: 425px) {
+  @include nb-install-component() {
+    nb-card {
+      width: 316px;
+    }
+  }
+}

@@ -11,13 +11,18 @@
                     </nb-list-item>
                 </nb-list>
             </nb-card>
-            <nb-card accent="info" size="tiny">
+            <nb-card accent="info" class="stacks_card">
                 <nb-card-header><b>Popular Stacks</b></nb-card-header>
                 <nb-card-body>
-                    <nb-tag-list>
-                        <nb-tag *ngFor="let stack of stacks" status="info" appearance="outline"
-                                text="{{stack.name}}"></nb-tag>
-                    </nb-tag-list>
+                    <div class="row show-grid">
+                        <div class="col-md-4" *ngFor="let stack of stacks">
+                            <nb-card accent="success">
+                                <nb-card-body>
+                                    <div class="stacks_name font-weight-bold">{{stack.name}}</div>
+                                </nb-card-body>
+                            </nb-card>
+                        </div>
+                    </div>
                 </nb-card-body>
             </nb-card>
         </div>
@@ -25,7 +30,7 @@
             <nb-card accent="info">
                 <nb-card-header class="text-center"><b>Total Companies</b></nb-card-header>
                 <nb-card-body class="text-center">
-                    <h1>{{total}}</h1>
+                    <h1>500</h1>
                 </nb-card-body>
             </nb-card>
             <nb-card accent="info">
@@ -40,6 +45,16 @@
                     </div>
                 </nb-card-body>
             </nb-card>
+            <a href="http://careertutor.fractalslab.com/" style="text-decoration: none" target="_blank">
+                <nb-card size="tiny">
+                    <nb-card-header><b>Free CV</b></nb-card-header>
+                    <nb-card-body>
+                        Here Some Curriculum Vitae (CV) Samples, Templates, and Writing Tips. <br>
+                        If you have any CV. Upload your CV or send all your information. We will make your
+                        CV.
+                    </nb-card-body>
+                </nb-card>
+            </a>
         </div>
     </div>
 </div>

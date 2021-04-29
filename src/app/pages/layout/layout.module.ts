@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
-    NbAccordionModule, NbActionsModule, NbAlertModule, NbAutocompleteModule, NbBadgeModule,
+    NbAccordionModule, NbActionsModule, NbAlertModule, NbAutocompleteModule, NbBadgeModule, NbButtonGroupModule,
     NbButtonModule,
     NbCardModule, NbIconModule, NbInputModule,
     NbListModule, NbPopoverModule, NbProgressBarModule, NbRadioModule,
@@ -46,6 +46,7 @@ import {StacksService} from '../../@core/mock/stacks.service';
         NbBadgeModule,
         NbAlertModule,
         NbIconModule,
+        NbButtonGroupModule,
     ],
     declarations: [
         LayoutComponent,

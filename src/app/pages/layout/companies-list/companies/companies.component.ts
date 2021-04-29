@@ -14,8 +14,8 @@ import {FormControl, Validators} from '@angular/forms';
     `],
 })
 export class CompaniesComponent implements OnInit {
-    showMore = false;
-    showbusiness = false;
+    showMore = true;
+    showbusiness = true;
     businessText: any[];
     ctrl = new FormControl(null, Validators.required);
 
@@ -42,6 +42,7 @@ export class CompaniesComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.warn(this.post);
+        this.showMore = false;
+        this.showbusiness = false;
     }
 }
