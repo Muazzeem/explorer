@@ -1,6 +1,7 @@
 <ng-template #contentTemplate let-data>
-    <p><img src="https://img.icons8.com/fluent/25/000000/link.png"/><a target="_blank"
-                                                                       href="{{post['web']}}">{{post['web']}}</a></p>
+    <p>
+        <nb-icon icon="attach" [options]="{ animation: { type: 'shake' } }"></nb-icon>
+        <a target="_blank" href="{{post['web']}}">{{post['web']}}</a></p>
     <p><b>Positions: </b>
         <nb-tag class="ml-1 mt-1" *ngFor="let temp2 of post['positions']"
                 status="basic" appearance="filled" text="{{temp2}}"></nb-tag>
@@ -21,8 +22,8 @@
     </article>
 </a>
 <div class="mt-3">
-    <button nbButton status="primary" size="small">Like</button>
-    <button nbButton status="danger" size="small">Dislike</button>
+    <button nbButton status="primary" size="tiny">Like</button>
+    <!--    <button nbButton status="danger" size="small">Dislike</button>-->
 </div>
 
 

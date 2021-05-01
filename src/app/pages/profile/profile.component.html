@@ -2,13 +2,14 @@
     <nb-card-header>
         <div class="row">
             <div class="col">
-                <b><img class="mr-2" src="https://img.icons8.com/fluent/30/000000/test-account.png"/>Personal
-                    Information: </b>
+                <b>
+                    <nb-icon icon="person" [options]="{ animation: { type: 'shake' } }"></nb-icon>
+                    Personal Information: </b>
             </div>
             <div class="col">
                 <button status="primary" size="small" class="float-right" routerLink="/pages/settings" nbButton
                         nbPopover="Update your personal information"
-                        nbPopoverTrigger="hover" nbPopoverPlacement="bottom">
+                        nbPopoverTrigger="hint" nbPopoverPlacement="bottom">
                     <nb-icon icon="settings-outline"></nb-icon>
                     Setting
                 </button>
@@ -50,13 +51,14 @@
     <nb-card-header><b>Your Favourite Stacks: </b></nb-card-header>
     <nb-card-body>
         <nb-tag-list>
+<!--            <nb-tag *ngFor="let stack of currentUser.stacks" status="success" appearance="filled" text="{{stack}}"></nb-tag>-->
         </nb-tag-list>
     </nb-card-body>
 </nb-card>
 <nb-card>
     <nb-badge text="New Feature" status="success" position="top right"></nb-badge>
     <nb-card-header>
-        <nb-icon icon="attach-outline" [options]="{ animation: { type: 'zoom' } }"></nb-icon>
+        <nb-icon icon="attach" [options]="{ animation: { type: 'zoom' } }"></nb-icon>
         <b>Upload Your Resume: </b>
     </nb-card-header>
     <nb-card-body>

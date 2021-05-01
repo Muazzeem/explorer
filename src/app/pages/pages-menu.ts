@@ -1,4 +1,5 @@
 import {NbMenuItem} from '@nebular/theme';
+import {animate, style} from '@angular/animations';
 
 export const MENU_ITEMS: NbMenuItem[] = [
     {

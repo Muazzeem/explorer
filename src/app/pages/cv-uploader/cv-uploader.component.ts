@@ -1,8 +1,9 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {environment} from '../../../environments/environment';
 import {DemoFilePickerAdapter} from './upload';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {FilePickerComponent, FilePreviewModel, ValidationError} from 'ngx-awesome-uploader';
+import {ToastrService} from '../service/toastr.service';
+
 
 @Component({
     selector: 'ngx-cv-uploader',
@@ -15,7 +16,7 @@ export class CvUploaderComponent implements OnInit {
     public successMessage: string;
     @ViewChild('uploader', {static: true}) uploader: FilePickerComponent;
     public myFiles: FilePreviewModel[] = [];
-    constructor(public http: HttpClient) {
+    constructor(public http: HttpClient, private toastrService: ToastrService) {
     }
     ngOnInit(): void {
         this.errorMessage = '';
@@ -27,7 +28,7 @@ export class CvUploaderComponent implements OnInit {
         this.errorMessage = er.error;
     }
     public onUploadSuccess(res: FilePreviewModel): void {
-        console.warn('File upload successful', res.fileName);
+        this.toastrService.showToast('Success', res.fileName);
     }
     public onUploadFail(er: HttpErrorResponse): void {
         console.warn('Fail', 'Try Again');

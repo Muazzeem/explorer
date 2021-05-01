@@ -11,7 +11,7 @@ import {
     NbButtonModule,
     NbSelectModule,
     NbIconModule,
-    NbThemeModule,
+    NbThemeModule, NbPopoverModule,
 } from '@nebular/theme';
 import {NbEvaIconsModule} from '@nebular/eva-icons';
 
@@ -33,6 +33,8 @@ import {
     TwoColumnsLayoutComponent,
 } from './layouts';
 import {RouterModule} from '@angular/router';
+import {AppShowAuthedDirective} from '../@core/mock/app-show-authed.directive';
+
 
 const NB_MODULES = [
     NbLayoutModule,
@@ -64,9 +66,9 @@ const PIPES = [
 ];
 
 @NgModule({
-    imports: [CommonModule, ...NB_MODULES, RouterModule],
-    exports: [CommonModule, ...PIPES, ...COMPONENTS],
-    declarations: [...COMPONENTS, ...PIPES],
+    imports: [CommonModule, ...NB_MODULES, RouterModule, NbPopoverModule],
+    exports: [CommonModule, ...PIPES, ...COMPONENTS, AppShowAuthedDirective],
+    declarations: [...COMPONENTS, ...PIPES, AppShowAuthedDirective],
 })
 export class ThemeModule {
     static forRoot(): ModuleWithProviders<ThemeModule> {

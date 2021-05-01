@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <textarea rows="3" nbInput fullWidth placeholder="Message" formControlName="feedback"></textarea>
+                <textarea rows="3" nbInput fullWidth placeholder="Message" formControlName="comment"></textarea>
                 <div *ngIf="feedback.invalid && (feedback.dirty || feedback.touched)">
                     <div *ngIf="feedback.errors.required">
                         <nb-alert class="col-md-6 mt-2" status="danger">We look forward to your feedback.</nb-alert>

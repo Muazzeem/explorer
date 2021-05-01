@@ -1,7 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService} from '@nebular/theme';
 import {LayoutService} from '../../../@core/utils';
-import {Subject} from 'rxjs';
 import {DialogService} from '../../../pages/service/dialog.service';
 import {UserService} from '../../../@core/mock/users.service';
 import {Router} from '@angular/router';
@@ -20,11 +19,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
             icon: 'person',
             title: 'Profile',
             link: '/pages/profile',
-        },
-        {
-            icon: 'settings',
-            title: 'Settings',
-            link: '/pages/settings',
         },
     ];
 

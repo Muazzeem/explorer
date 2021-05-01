@@ -1,8 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {UserService} from '../../@core/mock/users.service';
-import {concatMap, tap} from 'rxjs/operators';
-import {ActivatedRoute} from '@angular/router';
-import {User} from '../../@core/models';
 
 @Component({
     selector: 'ngx-profile',
@@ -16,29 +13,16 @@ import {User} from '../../@core/models';
     `],
 })
 export class ProfileComponent implements OnInit {
-    profile: any;
-    currentUser: User;
-    user: User = {} as User;
-    isUser: boolean;
+    currentUser: any;
 
     constructor(private userService: UserService,
-                private route: ActivatedRoute,
     ) {
     }
 
     ngOnInit() {
-        this.route.data.pipe(
-            concatMap((data) => {
-                this.profile = data;
-                return this.userService.currentUser.pipe(tap(
-                    (userData: User) => {
-                        this.currentUser = userData;
-                        console.warn(this.currentUser);
-                        this.isUser = (this.currentUser.username === this.profile.username);
-                    },
-                ));
-            }),
-        ).subscribe();
+        this.userService.currentUser.subscribe(user => {
+            this.currentUser = user;
+        });
     }
 
 }

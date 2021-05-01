@@ -1,5 +1,5 @@
 import {Component, OnInit, ChangeDetectionStrategy, ViewChild} from '@angular/core';
-import {NbTagComponent} from '@nebular/theme';
+import {NbTagComponent, NbTagInputAddEvent} from '@nebular/theme';
 import {Observable, of} from 'rxjs';
 import {StacksService} from '../../@core/mock/stacks.service';
 import {ApiService} from '../../@core/mock/api.service';
@@ -39,39 +39,18 @@ export class StacksUpdateComponent implements OnInit {
     }
 
     submit() {
-        this.updateUser({'stacks': Array.from(this.userStacks)});
-        this.userService
-            .updateStacks({'stacks': Array.from(this.userStacks)}).subscribe();
-    }
-
-    updateUser(values: Object) {
-        Object.assign(this.user, values);
+        // this.userService
+        //     .updateStacks({'stacks': Array.from(this.userStacks)}).subscribe();
     }
 
     onTagRemove(tagToRemove: NbTagComponent): void {
         this.userStacks.delete(tagToRemove.text);
     }
 
-    onTagAdd({value, input}): void {
-        this.userStacks = this.stackService.onTagAdd({value, input});
-    }
-
-    private filter(value: string): string[] {
-        const filterValue = value.toLowerCase();
-        return this.options.filter(optionValue => optionValue.toLowerCase().includes(filterValue));
-    }
-
-    getFilteredOptions(value: string): Observable<string[]> {
-        return of(value).pipe(
-            map(filterString => this.filter(filterString)),
-        );
-    }
-
-    onChange() {
-        this.filteredOptions$ = this.getFilteredOptions(this.input.nativeElement.value);
-    }
-
-    onSelectionChange($event) {
-        this.filteredOptions$ = this.getFilteredOptions($event);
+    onTagAdd({value, input}: NbTagInputAddEvent): void {
+        if (value) {
+            this.userStacks.add(value);
+        }
+        input.nativeElement.value = '';
     }
 }

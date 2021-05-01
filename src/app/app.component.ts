@@ -3,17 +3,19 @@
  * Copyright Akveo. All Rights Reserved.
  * Licensed under the MIT License. See License.txt in the project root for license information.
  */
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from './@core/mock/users.service';
 
 @Component({
-  selector: 'ngx-app',
-  template: '<router-outlet></router-outlet>',
+    selector: 'ngx-app',
+    template: '<router-outlet></router-outlet>',
 })
 export class AppComponent implements OnInit {
 
-  constructor() {
-  }
+    constructor(private userService: UserService) {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+        this.userService.populate();
+    }
 }

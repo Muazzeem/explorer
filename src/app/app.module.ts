@@ -25,11 +25,10 @@ import {
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {environment} from '../environments/environment';
 import {HttpTokenInterceptor} from './pages/interceptors';
-import {AppShowAuthedDirective} from './@core/mock/app-show-authed.directive';
 
 
 @NgModule({
-    declarations: [AppComponent, AppShowAuthedDirective],
+    declarations: [AppComponent],
     imports: [
         SocialLoginModule,
         BrowserModule,
@@ -73,7 +72,7 @@ import {AppShowAuthedDirective} from './@core/mock/app-show-authed.directive';
             } as SocialAuthServiceConfig,
         },
     ],
-    exports: [AppShowAuthedDirective],
+    exports: [],
 })
 export class AppModule {
 }

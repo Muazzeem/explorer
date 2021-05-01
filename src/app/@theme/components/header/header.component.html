@@ -8,8 +8,11 @@
 </div>
 
 <div class="header-container">
-    <a size="small" status="primary" (click)="login()" nbButton>Sign Up</a>
-    <a size="small" status="danger" (click)="ngOnDestroy()" nbButton>Sign Out</a>
+    <a nbPopover="sign up for more features..."
+       nbPopoverTrigger="hint" nbPopoverPlacement="bottom" size="small" status="primary" (click)="login()" nbButton>Sign
+        Up</a>
+    <a nbPopover="sign out"
+       nbPopoverTrigger="hint" nbPopoverPlacement="bottom" size="small" status="danger" (click)="ngOnDestroy()" nbButton>Sign Out</a>
     <nb-actions size="small">
         <nb-action class="control-item">
         </nb-action>

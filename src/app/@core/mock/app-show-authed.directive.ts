@@ -26,7 +26,7 @@ export class AppShowAuthedDirective implements OnInit {
         );
     }
 
-    @Input() set appShowAuthed(condition: boolean) {
+    @Input() set AppShowAuthedDirective(condition: boolean) {
         this.condition = condition;
     }
 
