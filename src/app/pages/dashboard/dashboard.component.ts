@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {ChartType} from 'chart.js';
 import {Label, MultiDataSet} from 'ng2-charts';
 import {ApiService} from '../../@core/mock/api.service';
+import {DialogService} from '../service/dialog.service';
 
 @Component({
     selector: 'ngx-dashboard',
@@ -11,7 +12,7 @@ import {ApiService} from '../../@core/mock/api.service';
 })
 export class DashboardComponent implements OnInit {
     totalCompanyURL = `/api/companies-count`;
-    total: 500;
+    total: any;
     user: any;
     doughnutChartLabels: Label[] = ['web', 'mobile', 'other'];
     doughnutChartData: MultiDataSet = [
@@ -19,7 +20,7 @@ export class DashboardComponent implements OnInit {
     ];
     doughnutChartType: ChartType = 'doughnut';
 
-    constructor(private apiService: ApiService) {
+    constructor(private apiService: ApiService, private dialog: DialogService) {
     }
 
     data = [
@@ -46,6 +47,19 @@ export class DashboardComponent implements OnInit {
 
     ngOnInit(): void {
         this.apiService.get(this.totalCompanyURL).subscribe((data: any) => {
+            this.total = data;
+            console.warn(this.total);
         });
+        this.advertisement();
+    }
+
+    advertisement() {
+        const alerted = localStorage.getItem('advertisement') || '';
+        if (alerted !== 'yes') {
+            setTimeout(() => {
+                this.dialog.add();
+            }, 1000);
+            localStorage.setItem('advertisement', 'yes');
+        }
     }
 }

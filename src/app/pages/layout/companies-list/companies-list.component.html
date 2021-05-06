@@ -9,6 +9,8 @@
                        #autoInput
                        (input)="onChange()"
                        [nbAutocomplete]="auto"
+                       status="info"
+                       fieldSize="giant"
                        placeholder="Search by stacks like (Python, TypeScript, Django, Angular)"
                        fullWidth>
                 <nb-autocomplete #auto (selectedChange)="onSelectionChange($event)">

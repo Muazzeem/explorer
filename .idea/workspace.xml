@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="93daf9ba-e959-48ff-9a81-165907e71308" name="Default Changelist" comment="remove extra css file">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/block-navigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/lcov.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/polyfills.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/sort-arrow-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/sorter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage/test.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/modal-overlays/dialog/advertisement/advertisement.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/core.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/core.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/data/users.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/data/users.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/mock/api.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/mock/api.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/mock/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/mock/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/mock/jwt.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/mock/jwt.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/mock/users.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/mock/users.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/models/errors.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/models/errors.model.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/models/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/models/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/models/profile.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/models/profile.model.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/models/user.model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/models/user.model.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/module-import-guard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/module-import-guard.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/analytics.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/analytics.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/layout.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/layout.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/player.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/player.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/seo.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/seo.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/state.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@core/utils/state.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/components/footer/footer.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/components/footer/footer.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/components/header/header.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/components/header/header.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/components/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/components/search-input/search-input.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/components/search-input/search-input.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/components/tiny-mce/tiny-mce.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/components/tiny-mce/tiny-mce.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/layouts/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/layouts/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/layouts/one-column/one-column.layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/layouts/one-column/one-column.layout.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/layouts/three-columns/three-columns.layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/layouts/three-columns/three-columns.layout.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/layouts/two-columns/two-columns.layout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/layouts/two-columns/two-columns.layout.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/capitalize.pipe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/capitalize.pipe.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/number-with-commas.pipe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/number-with-commas.pipe.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/plural.pipe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/plural.pipe.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/round.pipe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/round.pipe.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/timing.pipe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/pipes/timing.pipe.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/show-authed.directive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/show-authed.directive.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/styles/theme.corporate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/styles/theme.corporate.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/styles/theme.cosmic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/styles/theme.cosmic.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/styles/theme.dark.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/styles/theme.dark.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/styles/theme.default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/styles/theme.default.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/theme.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/@theme/theme.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app-routing.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app-routing.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/app.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/add-company/add-company.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/add-company/add-company.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/dashboard/charts/charts.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/dashboard/charts/charts.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/dashboard/dashboard.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/dashboard/dashboard.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/dashboard/dashboard.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/dashboard/dashboard.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/forms/form-layouts/form-layouts.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/forms/form-layouts/form-layouts.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/forms/forms-routing.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/forms/forms-routing.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/forms/forms.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/forms/forms.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/forms/forms.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/forms/forms.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/interceptors/http.token.interceptor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/interceptors/http.token.interceptor.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/interceptors/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/interceptors/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/infinite-list/infinite-list.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/infinite-list/infinite-list.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/infinite-list/news-post/news-post.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/infinite-list/news-post/news-post.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/layout-routing.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/layout-routing.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/layout.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/layout.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/layout.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/layout.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/news.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/news.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/recommend-companies/recommend-companies.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/layout/recommend-companies/recommend-companies.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/miscellaneous/miscellaneous-routing.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/miscellaneous/miscellaneous-routing.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/miscellaneous/miscellaneous.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/miscellaneous/miscellaneous.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/miscellaneous/miscellaneous.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/miscellaneous/miscellaneous.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/miscellaneous/not-found/not-found.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/miscellaneous/not-found/not-found.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/modal-overlays/dialog/log-out-dialog/log-out-dialog.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/modal-overlays/dialog/log-out-dialog/log-out-dialog.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/modal-overlays/dialog/showcase-dialog/showcase-dialog.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/modal-overlays/dialog/showcase-dialog/showcase-dialog.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/modal-overlays/modal-overlays.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/modal-overlays/modal-overlays.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/pages-menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/pages-menu.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/pages-routing.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/pages-routing.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/pages.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/pages.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/pages.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/pages.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/profile/profile.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/profile/profile.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/service/dialog.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/service/dialog.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/service/show-authed.directive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/service/show-authed.directive.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/service/toastr.service.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/service/toastr.service.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/settings/settings.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/settings/settings.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/sign-up/sign-up.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/sign-up/sign-up.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/stacks-update/stacks-update.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/stacks-update/stacks-update.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/update-profile/update-profile.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/app/pages/update-profile/update-profile.component.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/environments/environment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/environments/environment.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/main.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/polyfills.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/app/polyfills.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/spec/polyfills.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/spec/polyfills.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/spec/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out-tsc/spec/test.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/mock/companies.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/mock/companies.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/mock/jwt.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/mock/jwt.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/mock/stacks.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/mock/stacks.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@theme/pipes/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@theme/pipes/capitalize.pipe.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@theme/pipes/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@theme/pipes/number-with-commas.pipe.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@theme/pipes/plural.pipe.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@theme/pipes/round.pipe.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@theme/pipes/timing.pipe.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@theme/theme.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@theme/theme.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/layout/companies-list/companies-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/layout/companies-list/companies-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/layout/companies-list/companies-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/layout/companies-list/companies-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/layout/companies-list/companies/companies.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/layout/companies-list/companies/companies.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/layout/recommend-companies/recommend-companies.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/layout/recommend-companies/recommend-companies.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/modal-overlays/modal-overlays.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/modal-overlays/modal-overlays.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pages-menu.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages-menu.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/policy/policy.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/policy/policy.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/service/dialog.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/service/dialog.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/stacks-update/stacks-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/stacks-update/stacks-update.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qLoYxqH5tyrnT3WuQVcCDUPT5A" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/app/pages/modal-overlays/dialog/advertisement" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/pages/modal-overlays/dialog/advertisement" />
+      <recent name="$PROJECT_DIR$/src/app/pages/modal-overlays/dialog" />
+      <recent name="$PROJECT_DIR$/src/app/@core/mock" />
+      <recent name="$PROJECT_DIR$/src/app/pages/profile" />
+      <recent name="$PROJECT_DIR$/src/app/pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/pages/modal-overlays/dialog" />
+      <recent name="$PROJECT_DIR$/src/app/@core/mock" />
+      <recent name="$PROJECT_DIR$/src/app/@theme/directives" />
+      <recent name="$PROJECT_DIR$/src/app/@theme" />
+      <recent name="$PROJECT_DIR$/src/app/@theme/components/header" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.deploy">
+    <configuration name="E2E Tests (ngx-admin-demo-e2e)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/node_modules/protractor" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="build:prod" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build:prod" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint:ci" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:ci" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="lint:styles" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:styles" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.build:prod" />
+        <item itemvalue="npm.lint:fix" />
+        <item itemvalue="npm.lint:ci" />
+        <item itemvalue="npm.lint:styles" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93daf9ba-e959-48ff-9a81-165907e71308" name="Default Changelist" comment="" />
+      <created>1616868284755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616868284755</updated>
+      <workItem from="1616868288461" duration="3415000" />
+      <workItem from="1616898206957" duration="169000" />
+      <workItem from="1616898379475" duration="10510000" />
+      <workItem from="1616911642120" duration="4153000" />
+      <workItem from="1616915808551" duration="334000" />
+      <workItem from="1616918222129" duration="414000" />
+      <workItem from="1616918880165" duration="672000" />
+      <workItem from="1616938299762" duration="5142000" />
+      <workItem from="1616996285705" duration="4216000" />
+      <workItem from="1617017826031" duration="9284000" />
+      <workItem from="1617069142436" duration="602000" />
+      <workItem from="1617087807991" duration="11982000" />
+      <workItem from="1617170453135" duration="7920000" />
+      <workItem from="1617178707272" duration="3907000" />
+      <workItem from="1617237621879" duration="7426000" />
+      <workItem from="1617253374022" duration="1577000" />
+      <workItem from="1617255991330" duration="3678000" />
+      <workItem from="1617260605243" duration="1741000" />
+      <workItem from="1617262368316" duration="717000" />
+      <workItem from="1617263290502" duration="7177000" />
+      <workItem from="1617334164226" duration="12383000" />
+      <workItem from="1617419574289" duration="362000" />
+      <workItem from="1617422861853" duration="2149000" />
+      <workItem from="1617498663887" duration="5005000" />
+      <workItem from="1617588331537" duration="3268000" />
+      <workItem from="1617625491430" duration="556000" />
+      <workItem from="1617766670833" duration="2899000" />
+      <workItem from="1617852434686" duration="381000" />
+      <workItem from="1617852975073" duration="14220000" />
+      <workItem from="1617941774254" duration="3590000" />
+      <workItem from="1618037995624" duration="2429000" />
+      <workItem from="1618041104898" duration="1793000" />
+      <workItem from="1618042948663" duration="9943000" />
+      <workItem from="1618110030570" duration="12450000" />
+      <workItem from="1618130416138" duration="1103000" />
+      <workItem from="1618209047615" duration="210000" />
+      <workItem from="1618219404257" duration="643000" />
+      <workItem from="1618551439478" duration="19715000" />
+      <workItem from="1618631296061" duration="10398000" />
+      <workItem from="1618717961948" duration="2422000" />
+      <workItem from="1618727176578" duration="9000" />
+      <workItem from="1619090901598" duration="2832000" />
+      <workItem from="1619099741169" duration="19000" />
+      <workItem from="1619498363670" duration="8797000" />
+      <workItem from="1619516532629" duration="6957000" />
+      <workItem from="1619608404265" duration="4324000" />
+      <workItem from="1619666658572" duration="17583000" />
+      <workItem from="1619760225858" duration="17388000" />
+      <workItem from="1619843325804" duration="4174000" />
+      <workItem from="1619851953496" duration="2820000" />
+      <workItem from="1619855134948" duration="2081000" />
+      <workItem from="1619872121973" duration="615000" />
+      <workItem from="1619926694899" duration="2085000" />
+      <workItem from="1620022481958" duration="599000" />
+      <workItem from="1620109693523" duration="7659000" />
+      <workItem from="1620130060123" duration="211000" />
+      <workItem from="1620193132736" duration="351000" />
+      <workItem from="1620195401395" duration="2973000" />
+      <workItem from="1620280638025" duration="30000" />
+    </task>
+    <task id="LOCAL-00001" summary="install ang material">
+      <created>1616868756950</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616868756950</updated>
+    </task>
+    <task id="LOCAL-00002" summary="delete extra code">
+      <created>1616869827537</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1616869827537</updated>
+    </task>
+    <task id="LOCAL-00003" summary="delete extra code">
+      <created>1616899226870</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616899226870</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add infinite scroll">
+      <created>1616901166884</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616901166884</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remove extra code">
+      <created>1616902818555</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1616902818555</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add profile">
+      <created>1616905579819</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1616905579819</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add user stacks chips">
+      <created>1616911245857</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1616911245857</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add autocomplete">
+      <created>1616940406367</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616940406367</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add Settings">
+      <created>1617021505477</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617021505478</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update Settings">
+      <created>1617114489379</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617114489379</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add dialog">
+      <created>1617174694172</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617174694172</updated>
+    </task>
+    <task id="LOCAL-00012" summary="update files">
+      <created>1617266432791</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1617266432791</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update files">
+      <created>1617266645035</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1617266645035</updated>
+    </task>
+    <task id="LOCAL-00014" summary="update files">
+      <created>1617882918337</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1617882918337</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update files">
+      <created>1618044953852</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1618044953852</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add policy">
+      <created>1618064089037</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1618064089037</updated>
+    </task>
+    <task id="LOCAL-00017" summary="update html side">
+      <created>1618123953651</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1618123953651</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add RecommendCompanyService and remove all icon8">
+      <created>1618552494191</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1618552494191</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add StacksService in common place">
+      <created>1618553951031</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1618553951031</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add autocomplete">
+      <created>1618569437371</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1618569437371</updated>
+    </task>
+    <task id="LOCAL-00021" summary="add autocomplete">
+      <created>1618580478634</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1618580478634</updated>
+    </task>
+    <task id="LOCAL-00022" summary="remove blank space">
+      <created>1618581289779</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1618581289779</updated>
+    </task>
+    <task id="LOCAL-00023" summary="remove blank space">
+      <created>1619091235479</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1619091235479</updated>
+    </task>
+    <task id="LOCAL-00024" summary="remove blank space">
+      <created>1619521058622</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1619521058622</updated>
+    </task>
+    <task id="LOCAL-00025" summary="remove extra css file">
+      <created>1619675511969</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1619675511969</updated>
+    </task>
+    <task id="LOCAL-00026" summary="remove extra css file">
+      <created>1619703325259</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1619703325259</updated>
+    </task>
+    <task id="LOCAL-00027" summary="remove extra css file">
+      <created>1619704003872</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1619704003872</updated>
+    </task>
+    <task id="LOCAL-00028" summary="remove extra css file">
+      <created>1619844517907</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1619844517907</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="install ang material" />
+    <MESSAGE value="delete extra code" />
+    <MESSAGE value="add infinite scroll" />
+    <MESSAGE value="remove extra code" />
+    <MESSAGE value="add profile" />
+    <MESSAGE value="add user stacks chips" />
+    <MESSAGE value="add Settings" />
+    <MESSAGE value="update Settings" />
+    <MESSAGE value="add dialog" />
+    <MESSAGE value="update files" />
+    <MESSAGE value="add policy" />
+    <MESSAGE value="update html side" />
+    <MESSAGE value="add RecommendCompanyService and remove all icon8" />
+    <MESSAGE value="add StacksService in common place" />
+    <MESSAGE value="add autocomplete" />
+    <MESSAGE value="remove blank space" />
+    <MESSAGE value="remove extra css file" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove extra css file" />
+  </component>
+</project>

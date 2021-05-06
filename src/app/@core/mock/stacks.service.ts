@@ -19,6 +19,7 @@ export class StacksService implements OnInit {
     onTagAdd({value, input}: NbTagInputAddEvent): Set<string> {
         if (value) {
             this.trees.add(value);
+            console.warn(this.trees);
         }
         input.nativeElement.value = '';
         return this.trees;

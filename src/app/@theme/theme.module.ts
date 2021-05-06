@@ -20,13 +20,7 @@ import {
     HeaderComponent,
     TinyMCEComponent,
 } from './components';
-import {
-    CapitalizePipe,
-    PluralPipe,
-    RoundPipe,
-    TimingPipe,
-    NumberWithCommasPipe,
-} from './pipes';
+
 import {
     OneColumnLayoutComponent,
     ThreeColumnsLayoutComponent,
@@ -57,18 +51,11 @@ const COMPONENTS = [
     ThreeColumnsLayoutComponent,
     TwoColumnsLayoutComponent,
 ];
-const PIPES = [
-    CapitalizePipe,
-    PluralPipe,
-    RoundPipe,
-    TimingPipe,
-    NumberWithCommasPipe,
-];
 
 @NgModule({
     imports: [CommonModule, ...NB_MODULES, RouterModule, NbPopoverModule],
-    exports: [CommonModule, ...PIPES, ...COMPONENTS, AppShowAuthedDirective],
-    declarations: [...COMPONENTS, ...PIPES, AppShowAuthedDirective],
+    exports: [CommonModule, ...COMPONENTS, AppShowAuthedDirective],
+    declarations: [...COMPONENTS, AppShowAuthedDirective],
 })
 export class ThemeModule {
     static forRoot(): ModuleWithProviders<ThemeModule> {
@@ -79,7 +66,6 @@ export class ThemeModule {
                     {
                         name: 'default',
                     },
-                    [],
                 ).providers,
             ],
         };

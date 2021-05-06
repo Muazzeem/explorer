@@ -40,15 +40,17 @@ export class RecommendCompaniesComponent implements OnInit {
                     cardData.pageToLoadNext++;
                 },
                 err => {
-                    console.warn(err.error);
-                    this.error = err.error.error.message;
+                    console.warn(err.status);
+                    this.error = err.error.message;
                     this.showToast('top-right', 'danger');
                 },
             );
     }
+
     ngOnInit(): void {
         this.loading = false;
     }
+
     showToast(position, status) {
         this.index += 1;
         this.toastrService.show(

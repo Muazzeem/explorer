@@ -1,0 +1,36 @@
+@import '../../../../@theme/styles/themes';
+
+@include nb-install-component() {
+  nb-card {
+    width: 700px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  @include nb-install-component() {
+    nb-card {
+      width: 316px;
+    }
+    nb-card-header {
+      font-size: 14px;
+    }
+    nb-card-body {
+      padding: 10px;
+    }
+  }
+}
+
+nb-card-body {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+nb-card-header {
+  font-size: 20px;
+}
+
+nb-badge {
+  height: 20px;
+  cursor: pointer;
+}

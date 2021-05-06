@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
+    NbBadgeModule,
     NbButtonModule,
     NbCardModule,
     NbCheckboxModule,
@@ -20,11 +21,13 @@ import {ThemeModule} from '../../@theme/theme.module';
 import {ShowcaseDialogComponent} from './dialog/showcase-dialog/showcase-dialog.component';
 import {LogoutdialogDialogComponent} from './dialog/log-out-dialog/log-out-dialog.component';
 import {PagesModule} from '../pages.module';
+import {AdvertisementComponent} from './dialog/advertisement/advertisement.component';
 
 
 const COMPONENTS = [
     ShowcaseDialogComponent,
     LogoutdialogDialogComponent,
+    AdvertisementComponent,
 ];
 
 const ENTRY_COMPONENTS = [
@@ -52,6 +55,7 @@ const SERVICES = [];
     imports: [
         ...MODULES,
         PagesModule,
+        NbBadgeModule,
     ],
     declarations: [
         ...COMPONENTS,

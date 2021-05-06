@@ -2,7 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {Observable, of} from 'rxjs';
 import {ApiService} from '../../../@core/mock/api.service';
 import {CompaniesService} from '../../../@core/mock/companies.service';
-import {NbTagComponent} from '@nebular/theme';
+import {NbTagComponent, NbTagInputAddEvent} from '@nebular/theme';
 import {StacksService} from '../../../@core/mock/stacks.service';
 import {map} from 'rxjs/operators';
 
@@ -26,7 +26,7 @@ export class CompaniesListComponent implements OnInit {
     trees: Set<string> = new Set();
 
     constructor(private apiService: ApiService,
-                private newsService: CompaniesService,
+                private companiesService: CompaniesService,
                 private stackService: StacksService,
     ) {
     }
@@ -39,7 +39,7 @@ export class CompaniesListComponent implements OnInit {
         cardData.loading = true;
         this.loading = true;
         cardData.placeholders = new Array(this.pageSize);
-        this.newsService.load(cardData.pageToLoadNext, this.pageSize)
+        this.companiesService.load(cardData.pageToLoadNext, this.pageSize)
             .subscribe(nextNews => {
                 this.loading = false;
                 cardData.placeholders = [];

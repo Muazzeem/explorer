@@ -9,7 +9,7 @@
     <p *ngIf="!showbusiness"><b>Business: </b>
         {{(showMore) ? businessText : businessText | slice:0:200}}
         <span *ngIf="!showMore">...</span>
-        <a href="javascript:" *ngIf="!showMore" (click)="showMore=true">See More</a>
+        <a href="javascript:" *ngIf="!showMore" (click)="showMore=true">Read More</a>
     </p>
 </ng-template>
 
